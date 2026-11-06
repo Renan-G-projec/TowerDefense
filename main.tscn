@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://ctipm83nw5vof" path="res://main.gd" id="1_ig7tw"]
 [ext_resource type="Theme" uid="uid://h6xj7fnqb1wh" path="res://styles/game_theme.tres" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://06houveexdnx" path="res://towers/tower_card.tscn" id="3_h2yge"]
+[ext_resource type="Resource" uid="uid://cnh10qjsdiqon" path="res://towers/data/placeholder1.tres" id="4_7mycd"]
+[ext_resource type="Resource" uid="uid://ypq5tbphp7rh" path="res://towers/data/placeholder2.tres" id="5_272bh"]
+[ext_resource type="Resource" uid="uid://huq7vm0ogyew" path="res://towers/data/placeholder3.tres" id="6_5vw27"]
 
 [node name="Main" type="Node" unique_id=1064918994]
 script = ExtResource("1_ig7tw")
@@ -42,18 +45,12 @@ layout_mode = 2
 
 [node name="TowerCard2" parent="GUI/MainUI/PanelContainer/MarginContainer/HBoxContainer" unique_id=106334537 instance=ExtResource("3_h2yge")]
 layout_mode = 2
+data = ExtResource("4_7mycd")
 
 [node name="TowerCard3" parent="GUI/MainUI/PanelContainer/MarginContainer/HBoxContainer" unique_id=501396240 instance=ExtResource("3_h2yge")]
 layout_mode = 2
+data = ExtResource("5_272bh")
 
 [node name="TowerCard4" parent="GUI/MainUI/PanelContainer/MarginContainer/HBoxContainer" unique_id=1804946632 instance=ExtResource("3_h2yge")]
 layout_mode = 2
-
-[node name="TowerCard5" parent="GUI/MainUI/PanelContainer/MarginContainer/HBoxContainer" unique_id=1016494259 instance=ExtResource("3_h2yge")]
-layout_mode = 2
-
-[node name="TowerCard6" parent="GUI/MainUI/PanelContainer/MarginContainer/HBoxContainer" unique_id=1464442556 instance=ExtResource("3_h2yge")]
-layout_mode = 2
-
-[node name="TowerCard7" parent="GUI/MainUI/PanelContainer/MarginContainer/HBoxContainer" unique_id=437111182 instance=ExtResource("3_h2yge")]
-layout_mode = 2
+data = ExtResource("6_5vw27")

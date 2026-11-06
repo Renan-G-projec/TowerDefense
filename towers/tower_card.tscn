@@ -28,6 +28,7 @@ theme_override_constants/separation = 0
 alignment = 1
 
 [node name="Icon" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=300174126]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 10
@@ -35,6 +36,7 @@ texture = ExtResource("1_7a22i")
 stretch_mode = 4
 
 [node name="Name" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1231456914]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 6
 theme = ExtResource("2_tnfel")
@@ -43,6 +45,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Price" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1278369999]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 8
 theme = ExtResource("2_tnfel")
