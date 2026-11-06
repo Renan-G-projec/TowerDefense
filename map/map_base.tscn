@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://l15adwdlgwmt"]
+
+[ext_resource type="Script" uid="uid://c1m075y30jkfd" path="res://map/map_base.gd" id="1_tw1f7"]
+
+[sub_resource type="Curve2D" id="Curve2D_71j3w"]
+
+[node name="MapBase" type="Node2D" unique_id=577773077]
+script = ExtResource("1_tw1f7")
+
+[node name="Floor" type="TileMapLayer" parent="." unique_id=1393069245]
+
+[node name="EnemyPath" type="TileMapLayer" parent="." unique_id=2133954244]
+
+[node name="Decorations" type="TileMapLayer" parent="." unique_id=377948650]
+
+[node name="EnemyLogicalPath" type="Path2D" parent="." unique_id=842917238]
+curve = SubResource("Curve2D_71j3w")
