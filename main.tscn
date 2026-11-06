@@ -1,6 +1,59 @@
 [gd_scene format=3 uid="uid://cqow47bch5ocs"]
 
 [ext_resource type="Script" uid="uid://ctipm83nw5vof" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Theme" uid="uid://h6xj7fnqb1wh" path="res://styles/game_theme.tres" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://06houveexdnx" path="res://towers/tower_card.tscn" id="3_h2yge"]
 
 [node name="Main" type="Node" unique_id=1064918994]
 script = ExtResource("1_ig7tw")
+
+[node name="MapContainer" type="Node" parent="." unique_id=1339865912]
+
+[node name="GUI" type="CanvasLayer" parent="." unique_id=360908504]
+
+[node name="MainUI" type="Control" parent="GUI" unique_id=884637452]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="GUI/MainUI" unique_id=751853854]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -152.0
+offset_right = 152.0
+offset_bottom = 45.0
+grow_horizontal = 2
+theme = ExtResource("2_0xm2m")
+
+[node name="MarginContainer" type="MarginContainer" parent="GUI/MainUI/PanelContainer" unique_id=782667467]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GUI/MainUI/PanelContainer/MarginContainer" unique_id=800750906]
+layout_mode = 2
+
+[node name="TowerCard2" parent="GUI/MainUI/PanelContainer/MarginContainer/HBoxContainer" unique_id=106334537 instance=ExtResource("3_h2yge")]
+layout_mode = 2
+
+[node name="TowerCard3" parent="GUI/MainUI/PanelContainer/MarginContainer/HBoxContainer" unique_id=501396240 instance=ExtResource("3_h2yge")]
+layout_mode = 2
+
+[node name="TowerCard4" parent="GUI/MainUI/PanelContainer/MarginContainer/HBoxContainer" unique_id=1804946632 instance=ExtResource("3_h2yge")]
+layout_mode = 2
+
+[node name="TowerCard5" parent="GUI/MainUI/PanelContainer/MarginContainer/HBoxContainer" unique_id=1016494259 instance=ExtResource("3_h2yge")]
+layout_mode = 2
+
+[node name="TowerCard6" parent="GUI/MainUI/PanelContainer/MarginContainer/HBoxContainer" unique_id=1464442556 instance=ExtResource("3_h2yge")]
+layout_mode = 2
+
+[node name="TowerCard7" parent="GUI/MainUI/PanelContainer/MarginContainer/HBoxContainer" unique_id=437111182 instance=ExtResource("3_h2yge")]
+layout_mode = 2
