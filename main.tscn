@@ -40,17 +40,18 @@ theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="GUI/MainUI/PanelContainer/MarginContainer" unique_id=800750906]
+[node name="TowerCardContainer" type="HBoxContainer" parent="GUI/MainUI/PanelContainer/MarginContainer" unique_id=800750906]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="TowerCard2" parent="GUI/MainUI/PanelContainer/MarginContainer/HBoxContainer" unique_id=106334537 instance=ExtResource("3_h2yge")]
+[node name="TowerCard2" parent="GUI/MainUI/PanelContainer/MarginContainer/TowerCardContainer" unique_id=106334537 instance=ExtResource("3_h2yge")]
 layout_mode = 2
 data = ExtResource("4_7mycd")
 
-[node name="TowerCard3" parent="GUI/MainUI/PanelContainer/MarginContainer/HBoxContainer" unique_id=501396240 instance=ExtResource("3_h2yge")]
+[node name="TowerCard3" parent="GUI/MainUI/PanelContainer/MarginContainer/TowerCardContainer" unique_id=501396240 instance=ExtResource("3_h2yge")]
 layout_mode = 2
 data = ExtResource("5_272bh")
 
-[node name="TowerCard4" parent="GUI/MainUI/PanelContainer/MarginContainer/HBoxContainer" unique_id=1804946632 instance=ExtResource("3_h2yge")]
+[node name="TowerCard4" parent="GUI/MainUI/PanelContainer/MarginContainer/TowerCardContainer" unique_id=1804946632 instance=ExtResource("3_h2yge")]
 layout_mode = 2
 data = ExtResource("6_5vw27")

@@ -1,8 +1,57 @@
 [gd_resource type="Theme" format=3 uid="uid://h6xj7fnqb1wh"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ljn5x"]
+bg_color = Color(0.4378631, 0.20279557, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3789274, 0.17916957, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mycd"]
+bg_color = Color(0.62701297, 0.3003666, 1.92523e-07, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.49124277, 0.24021697, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0o385"]
+bg_color = Color(0.62878376, 0.3007181, 2.8878452e-07, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.73490113, 0.5675576, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7b0pg"]
-bg_color = Color(0, 0, 0, 0.3529412)
+bg_color = Color(0.20779905, 0.08951109, 0.0067398213, 0.44313726)
+border_width_left = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.2509804, 0.10980392, 0.03529412, 1)
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [resource]
+Button/styles/disabled = SubResource("StyleBoxFlat_ljn5x")
+Button/styles/disabled_mirrored = SubResource("StyleBoxFlat_ljn5x")
+Button/styles/focus = SubResource("StyleBoxFlat_7mycd")
+Button/styles/hover = SubResource("StyleBoxFlat_0o385")
+Button/styles/hover_pressed = SubResource("StyleBoxFlat_0o385")
+Button/styles/normal = SubResource("StyleBoxFlat_7mycd")
+Button/styles/normal_mirrored = SubResource("StyleBoxFlat_7mycd")
 Label/font_sizes/font_size = 4
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_7b0pg")

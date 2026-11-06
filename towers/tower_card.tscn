@@ -8,6 +8,7 @@
 custom_minimum_size = Vector2(30, 40)
 offset_right = 30.0
 offset_bottom = 40.0
+theme = ExtResource("2_tnfel")
 script = ExtResource("1_tdnbx")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=769195589]
@@ -51,3 +52,5 @@ size_flags_vertical = 8
 theme = ExtResource("2_tnfel")
 text = "100"
 horizontal_alignment = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
