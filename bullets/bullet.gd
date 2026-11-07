@@ -5,14 +5,8 @@ var direction: Vector2 = Vector2.RIGHT
 @export var speed: float = 80
 @export var damage: float = 15
 
-
-func setup(angle: float) -> void:
-	direction = Vector2.DOWN.rotated(angle)
-	rotation = angle
-
 func _process(delta: float) -> void:
 	position += speed * delta * direction
-
 
 func _on_area_entered(area: Area2D) -> void:
 	var enemy: EnemyBase = area.get_parent() as EnemyBase

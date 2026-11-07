@@ -22,10 +22,9 @@ metadata/_snap_enabled = true
 script = ExtResource("1_crlvv")
 
 [node name="Base" type="Sprite2D" parent="." unique_id=2112970244]
+position = Vector2(0, 8)
 texture = ExtResource("2_7fffe")
-
-[node name="Turrent" type="Sprite2D" parent="." unique_id=1610330955]
-texture = ExtResource("2_7fffe")
+offset = Vector2(0, -8)
 
 [node name="EnemyDetectionArea" type="Area2D" parent="." unique_id=1020690148]
 

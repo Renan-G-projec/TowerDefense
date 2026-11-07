@@ -8,6 +8,8 @@ var current_money: int = 0:
 		current_money_changed.emit(current_money)
 signal current_money_changed(new_money: int)
 
+@onready var map: MapBase = $MapBase
+
 # to activate dev features such as add money
 var _is_dev_build: bool = false
 
@@ -39,9 +41,11 @@ func pause_game() -> void:
 
 func purchase(tower: TowerData) -> bool:
 	if current_money < tower.price: return false
+	
+	var tower_scene: TowerBase = tower.scene.instantiate()
+	map.add_child(tower_scene)
+	tower_scene.is_being_placed = true
+	
 	current_money -= tower.price
-	
-	if _is_dev_build: print("[TO IMPLEMNENT] Purchased tower %s" % tower.name)
-	
 	return true
 		

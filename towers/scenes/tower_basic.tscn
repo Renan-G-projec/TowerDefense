@@ -18,21 +18,17 @@ bullet = ExtResource("3_ice6g")
 [node name="Base" parent="." index="0" unique_id=2112970244]
 texture = ExtResource("3_cp180")
 
-[node name="Turrent" parent="." index="1" unique_id=1610330955]
-position = Vector2(14, 0)
-texture = null
-
 [node name="CollisionShape2D" parent="EnemyDetectionArea" parent_id_path=PackedInt32Array(1020690148) index="0" unique_id=1788439946]
 shape = SubResource("CircleShape2D_g820p")
 
-[node name="PlaceOnMap" parent="." index="3" unique_id=1973370455]
+[node name="PlaceOnMap" parent="." index="2" unique_id=1973370455]
 position = Vector2(0, 14.01)
 
 [node name="CollisionShape2D" parent="PlaceOnMap" index="0" unique_id=284692196]
 position = Vector2(0, -1.0100002)
 shape = SubResource("RectangleShape2D_crlvv")
 
-[node name="PointLight2D" parent="." index="4" unique_id=1218855911]
+[node name="PointLight2D" parent="." index="3" unique_id=1218855911]
 energy = 0.2
 texture_scale = 3.0
 
