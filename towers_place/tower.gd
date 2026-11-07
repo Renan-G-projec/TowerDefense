@@ -12,6 +12,6 @@ func _on_enemy_detection_area_area_entered(area: Area2D) -> void:
 	pass # Replace with function body.
 
 
-func _on_enemy_detection_area_area_shape_exited(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+func _on_enemy_detection_area_area_shape_exited(_area_rid: RID, area: Area2D, _area_shape_index: int, _local_shape_index: int) -> void:
 	if area in enemies:
 		enemies.erase(area)
