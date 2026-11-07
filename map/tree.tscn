@@ -40,8 +40,9 @@ polygon = PackedVector2Array(0, -37, 4, -35, 6, -31, 9, -31, 10, -25, 11, -19, 1
 
 [node name="Tree" type="AnimatedSprite2D" unique_id=2051237497]
 light_mask = 2
+y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_d1p6d")
-frame = 3
+frame = 1
 offset = Vector2(0, -20)
 script = ExtResource("5_tomtr")
 
@@ -50,7 +51,6 @@ visible = false
 occluder = SubResource("OccluderPolygon2D_tomtr")
 
 [node name="LightOccluder2D2" type="LightOccluder2D" parent="." unique_id=944935200]
-visible = false
 position = Vector2(0, 1)
 occluder = SubResource("OccluderPolygon2D_xcdkv")
 
@@ -59,4 +59,5 @@ visible = false
 occluder = SubResource("OccluderPolygon2D_xup7d")
 
 [node name="LightOccluder2D4" type="LightOccluder2D" parent="." unique_id=1825426985]
+visible = false
 occluder = SubResource("OccluderPolygon2D_yryib")

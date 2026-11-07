@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="TowerData" format=3 uid="uid://cnh10qjsdiqon"]
 
 [ext_resource type="Script" uid="uid://doiehsh2k6vxu" path="res://towers/tower_data.gd" id="1_ojx5r"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ojx5r"]
-load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+[ext_resource type="Texture2D" uid="uid://bp0hqif0cfq4t" path="res://sprites/towers/archer_tower_full.png" id="1_qt7im"]
+[ext_resource type="PackedScene" uid="uid://bxun6tfvdtcpb" path="res://towers/scenes/tower_basic.tscn" id="2_nqhck"]
 
 [resource]
 script = ExtResource("1_ojx5r")
-icon = SubResource("CompressedTexture2D_ojx5r")
-name = "First"
-description = "The first tower. Placeholder"
+icon = ExtResource("1_qt7im")
+name = "Archer"
+description = "The first tower!"
+scene = ExtResource("2_nqhck")
 price = 40
 metadata/_custom_type_script = "uid://doiehsh2k6vxu"
