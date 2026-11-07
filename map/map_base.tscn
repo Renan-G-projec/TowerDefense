@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c1m075y30jkfd" path="res://map/map_base.gd" id="1_tw1f7"]
 [ext_resource type="PackedScene" uid="uid://bxun6tfvdtcpb" path="res://towers/scenes/tower_basic.tscn" id="2_io6if"]
+[ext_resource type="PackedScene" uid="uid://d1j812gokobcg" path="res://bullets/bullet.tscn" id="3_o3boa"]
 
 [sub_resource type="Curve2D" id="Curve2D_7frlh"]
 _data = {
@@ -11,6 +12,10 @@ point_count = 12
 
 [node name="MapBase" type="Node2D" unique_id=577773077]
 script = ExtResource("1_tw1f7")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=211266880]
+position = Vector2(28, 47)
+zoom = Vector2(3, 3)
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=1393069245]
 
@@ -27,6 +32,6 @@ curve = SubResource("Curve2D_7frlh")
 [node name="TowerBasic" parent="Towers" unique_id=1587955538 instance=ExtResource("2_io6if")]
 position = Vector2(26, 46)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=211266880]
-position = Vector2(28, 47)
-zoom = Vector2(3, 3)
+[node name="Bullets" type="Node2D" parent="." unique_id=1005244149]
+
+[node name="Bullet" parent="Bullets" unique_id=897676854 instance=ExtResource("3_o3boa")]

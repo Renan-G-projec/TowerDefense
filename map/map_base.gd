@@ -3,7 +3,10 @@ class_name MapBase
 extends Node2D
 
 ## TODO: Add all the round changing logic here
+
 var enemy_scene = preload("res://enemies/enemy.tscn")
+var bullet_scene = preload("res://bullets/bullet.tscn")
+
 @export var rounds: Array[RoundData]
 
 @export var current_round: int = 0:
@@ -27,3 +30,9 @@ func _ready() -> void:
 	enemy.setup(path_follow)
 	path_follow.add_child(enemy)
 	$EnemyLogicalPath.add_child(path_follow)
+	$Towers/TowerBasic.connect('shoot', create_bullet)
+	
+func create_bullet(pos: Vector2, angle: float, bullet_enum: Data.Bullet) -> void:
+	var bullet = bullet_scene.instantiate()
+	bullet.setup(pos, angle, bullet_enum)
+	$Bullets.add_child(bullet)
