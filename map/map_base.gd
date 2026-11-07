@@ -10,8 +10,8 @@ var enemy_scene: PackedScene = preload("res://enemies/enemy_base.tscn")
 
 @export var current_round: int = 0:
 	set(val):
-		current_round = clampi(val, 0, rounds.size() - 1)
 		if current_round == val: return
+		current_round = max(0, val)
 		
 		round_changed.emit(current_round)
 		
@@ -39,8 +39,6 @@ func start_round() -> void:
 	var current_round_data: RoundData = rounds[current_round]
 	_number_of_entities = current_round_data.get_number_of_enemies()
 	
-	earned_money.emit(current_round_data.money_on_start)
-	
 	for enemy in current_round_data.enemies:
 		print(enemy)
 		for enemy_index in current_round_data.enemies.get(enemy, 0):
@@ -64,6 +62,8 @@ func _on_target_area_area_entered(area: Area2D) -> void:
 	
 	_number_of_entities -= 1
 	if _number_of_entities <= 0:
+		if lifes > 0:
+			earned_money.emit(rounds[current_round].money_on_finish)
 		current_round += 1
 		if current_round >= rounds.size() && lifes > 0:
 			win.emit()
@@ -74,6 +74,10 @@ func _on_enemy_died(enemy: EnemyBase) -> void:
 	earned_money.emit(enemy.money_on_death)
 	_number_of_entities -= 1
 	if _number_of_entities <= 0:
+		if lifes > 0:
+			earned_money.emit(rounds[current_round].money_on_finish)
+		
 		current_round += 1
+		
 		if current_round >= rounds.size() && lifes > 0:
 			win.emit()

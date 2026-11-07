@@ -18,6 +18,7 @@ var _is_placing_tower: bool = false
 func _ready() -> void:
 	%MoneyLabel.text = str(current_money)
 	%LifeLabel.text = str($MapBase.lifes)
+	%RoundLabel.text = str($MapBase.current_round + 1)
 	
 	_is_dev_build = OS.has_feature("editor")
 	
@@ -60,7 +61,7 @@ func purchase(tower: TowerData) -> void:
 		current_money -= tower.price
 	
 	var on_tower_placing_cancelled: Callable = func() -> void:
-		_enter_building_state()
+		_exit_building_state()
 	
 	tower_scene.placed.connect(on_tower_placed)
 	tower_scene.cancelled.connect(on_tower_placing_cancelled)
@@ -86,7 +87,7 @@ func _exit_building_state() -> void:
 
 
 func _on_map_base_game_over() -> void:
-	print("GAME_OVER")
+	SceneManager.change_scene("res://game_over.tscn", { "wait_time": 0.0 })
 
 
 func _on_current_money_changed(new_money: int) -> void:
@@ -99,3 +100,11 @@ func _on_map_base_earned_money(quantity: int) -> void:
 
 func _on_map_base_lifes_changed(new_lifes: int) -> void:
 	%LifeLabel.text = str(new_lifes)
+
+
+func _on_map_base_win() -> void:
+	SceneManager.change_scene("res://win.tscn", { "wait_time": 0.0 })
+
+
+func _on_map_base_round_changed(new_round: int) -> void:
+	%RoundLabel.text = str(new_round + 1)

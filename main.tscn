@@ -57,31 +57,61 @@ data = ExtResource("6_5vw27")
 layout_mode = 2
 data = ExtResource("5_272bh")
 
-[node name="MoneyLabel" type="Label" parent="GUI/MainUI" unique_id=1385087060]
-unique_name_in_owner = true
+[node name="LifeContainer" type="HBoxContainer" parent="GUI/MainUI" unique_id=355522653]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -24.0
-offset_right = 99.0
+offset_top = -55.480003
+offset_right = 92.0
+offset_bottom = -15.480087
 grow_vertical = 0
+
+[node name="Label" type="Label" parent="GUI/MainUI/LifeContainer" unique_id=1560810475]
+layout_mode = 2
+text = "Lifes:"
+
+[node name="LifeLabel" type="Label" parent="GUI/MainUI/LifeContainer" unique_id=175842390]
+unique_name_in_owner = true
+layout_mode = 2
 text = "0"
 
-[node name="LifeLabel" type="Label" parent="GUI/MainUI" unique_id=175842390]
-unique_name_in_owner = true
+[node name="MoneyContainer" type="HBoxContainer" parent="GUI/MainUI" unique_id=1723565653]
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
+anchors_preset = 2
 anchor_top = 1.0
-anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -99.0
-offset_top = -24.0
-grow_horizontal = 0
+offset_top = -40.0
+offset_right = 91.0
 grow_vertical = 0
+
+[node name="Label" type="Label" parent="GUI/MainUI/MoneyContainer" unique_id=843930382]
+layout_mode = 2
+text = "Money:"
+
+[node name="MoneyLabel" type="Label" parent="GUI/MainUI/MoneyContainer" unique_id=1385087060]
+unique_name_in_owner = true
+layout_mode = 2
 text = "0"
-horizontal_alignment = 2
+
+[node name="RoundContainer" type="HBoxContainer" parent="GUI/MainUI" unique_id=723116179]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -70.995
+offset_right = 94.0
+offset_bottom = -30.99501
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="GUI/MainUI/RoundContainer" unique_id=1142224997]
+layout_mode = 2
+text = "Round: "
+
+[node name="RoundLabel" type="Label" parent="GUI/MainUI/RoundContainer" unique_id=512893833]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
 
 [node name="MapBase" parent="." unique_id=577773077 instance=ExtResource("7_272bh")]
 position = Vector2(0, -1)
@@ -93,3 +123,5 @@ position = Vector2(168, 102)
 [connection signal="earned_money" from="MapBase" to="." method="_on_map_base_earned_money"]
 [connection signal="game_over" from="MapBase" to="." method="_on_map_base_game_over"]
 [connection signal="lifes_changed" from="MapBase" to="." method="_on_map_base_lifes_changed"]
+[connection signal="round_changed" from="MapBase" to="." method="_on_map_base_round_changed"]
+[connection signal="win" from="MapBase" to="." method="_on_map_base_win"]
