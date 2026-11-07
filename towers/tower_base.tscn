@@ -39,4 +39,4 @@ energy = 0.4
 texture = SubResource("GradientTexture2D_d1p6d")
 
 [connection signal="area_entered" from="EnemyDetectionArea" to="." method="_on_enemy_detection_area_area_entered"]
-[connection signal="area_shape_exited" from="EnemyDetectionArea" to="." method="_on_enemy_detection_area_area_shape_exited"]
+[connection signal="area_exited" from="EnemyDetectionArea" to="." method="_on_enemy_detection_area_area_exited"]
