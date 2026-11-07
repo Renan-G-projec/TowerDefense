@@ -16,6 +16,9 @@ var _is_dev_build: bool = false
 var _is_placing_tower: bool = false
 
 func _ready() -> void:
+	%MoneyLabel.text = str(current_money)
+	%LifeLabel.text = str($MapBase.lifes)
+	
 	_is_dev_build = OS.has_feature("editor")
 	
 	# Connects all to the cards to the current money and the purchased signal
@@ -84,3 +87,15 @@ func _exit_building_state() -> void:
 
 func _on_map_base_game_over() -> void:
 	print("GAME_OVER")
+
+
+func _on_current_money_changed(new_money: int) -> void:
+	%MoneyLabel.text = str(new_money)
+
+
+func _on_map_base_earned_money(quantity: int) -> void:
+	current_money += quantity
+
+
+func _on_map_base_lifes_changed(new_lifes: int) -> void:
+	%LifeLabel.text = str(new_lifes)
