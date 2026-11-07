@@ -13,8 +13,11 @@ script = ExtResource("1_7frlh")
 collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Area" unique_id=619571582]
+y_sort_enabled = true
+position = Vector2(0.21861267, 8.263874)
 rotation = 1.5707964
 texture = ExtResource("1_fw1ev")
+offset = Vector2(-8.263874, 0.21861303)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area" unique_id=1238952111]
 shape = SubResource("CircleShape2D_xslbe")

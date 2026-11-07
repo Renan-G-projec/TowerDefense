@@ -62,4 +62,4 @@ data = ExtResource("6_5vw27")
 position = Vector2(0, -1)
 
 [node name="TowerBasic" parent="MapBase" unique_id=1587955538 instance=ExtResource("8_5vw27")]
-position = Vector2(172, 110)
+position = Vector2(169, 105)

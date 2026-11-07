@@ -19,6 +19,7 @@ fill_to = Vector2(0.90000004, 0.5)
 metadata/_snap_enabled = true
 
 [node name="TowerBase" type="Node2D" unique_id=1587955538]
+y_sort_enabled = true
 script = ExtResource("1_crlvv")
 
 [node name="Base" type="Sprite2D" parent="." unique_id=2112970244]
