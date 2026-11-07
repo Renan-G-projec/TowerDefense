@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bxun6tfvdtcpb"]
 
-[ext_resource type="PackedScene" uid="uid://tsp0lb5s8sga" path="res://towers_place/tower.tscn" id="1_gsslw"]
-[ext_resource type="Script" uid="uid://bol2ts5wten3w" path="res://towers_place/tower_basic.gd" id="2_u8jxf"]
+[ext_resource type="PackedScene" uid="uid://tsp0lb5s8sga" path="res://towers/tower_base.tscn" id="1_gsslw"]
+[ext_resource type="Script" uid="uid://bol2ts5wten3w" path="res://towers/scenes/tower_basic.gd" id="2_u8jxf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g820p"]
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://l15adwdlgwmt"]
 
 [ext_resource type="Script" uid="uid://c1m075y30jkfd" path="res://map/map_base.gd" id="1_tw1f7"]
-[ext_resource type="PackedScene" uid="uid://bxun6tfvdtcpb" path="res://towers_place/tower_basic.tscn" id="2_io6if"]
+[ext_resource type="PackedScene" uid="uid://bxun6tfvdtcpb" path="res://towers/scenes/tower_basic.tscn" id="2_io6if"]
 
 [sub_resource type="Curve2D" id="Curve2D_7frlh"]
 _data = {

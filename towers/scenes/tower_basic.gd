@@ -1,4 +1,4 @@
-extends Tower
+extends TowerBase
 
 func _process(delta: float) -> void:
 	if enemies.size() > 0:

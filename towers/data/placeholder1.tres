@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="TowerData" format=3 uid="uid://cnh10qjsdiqon"]
 
-[ext_resource type="Script" uid="uid://doiehsh2k6vxu" path="res://towers_icon/tower_data.gd" id="1_ojx5r"]
+[ext_resource type="Script" uid="uid://doiehsh2k6vxu" path="res://towers/tower_data.gd" id="1_ojx5r"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ojx5r"]
 load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"

@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://ctipm83nw5vof" path="res://main.gd" id="1_ig7tw"]
 [ext_resource type="Theme" uid="uid://h6xj7fnqb1wh" path="res://styles/game_theme.tres" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://06houveexdnx" path="res://towers_icon/tower_card.tscn" id="3_h2yge"]
-[ext_resource type="Resource" uid="uid://cnh10qjsdiqon" path="res://towers_icon/data/placeholder1.tres" id="4_7mycd"]
-[ext_resource type="Resource" uid="uid://ypq5tbphp7rh" path="res://towers_icon/data/placeholder2.tres" id="5_272bh"]
-[ext_resource type="Resource" uid="uid://huq7vm0ogyew" path="res://towers_icon/data/placeholder3.tres" id="6_5vw27"]
+[ext_resource type="PackedScene" uid="uid://06houveexdnx" path="res://towers/tower_card.tscn" id="3_h2yge"]
+[ext_resource type="Resource" uid="uid://cnh10qjsdiqon" path="res://towers/data/placeholder1.tres" id="4_7mycd"]
+[ext_resource type="Resource" uid="uid://ypq5tbphp7rh" path="res://towers/data/placeholder2.tres" id="5_272bh"]
+[ext_resource type="Resource" uid="uid://huq7vm0ogyew" path="res://towers/data/placeholder3.tres" id="6_5vw27"]
 [ext_resource type="PackedScene" uid="uid://l15adwdlgwmt" path="res://map/map_base.tscn" id="7_272bh"]
 
 [node name="Main" type="Node" unique_id=1064918994]
