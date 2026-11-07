@@ -10,6 +10,8 @@ _data = {
 }
 point_count = 12
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d1p6d"]
+
 [node name="MapBase" type="Node2D" unique_id=577773077]
 y_sort_enabled = true
 script = ExtResource("1_tw1f7")
@@ -45,11 +47,9 @@ tile_set = ExtResource("2_o3boa")
 
 [node name="Tree" parent="Decorations" unique_id=2051237497 instance=ExtResource("4_6i3t0")]
 position = Vector2(47, 23)
-frame = 2
 
 [node name="Tree2" parent="Decorations" unique_id=1096029115 instance=ExtResource("4_6i3t0")]
 position = Vector2(165, 12)
-frame = 2
 
 [node name="Tree3" parent="Decorations" unique_id=197305892 instance=ExtResource("4_6i3t0")]
 position = Vector2(282, 44)
@@ -60,21 +60,21 @@ frame = 2
 
 [node name="Tree5" parent="Decorations" unique_id=1603009426 instance=ExtResource("4_6i3t0")]
 position = Vector2(256, 149)
-frame = 2
+frame = 0
 
 [node name="Tree6" parent="Decorations" unique_id=792368847 instance=ExtResource("4_6i3t0")]
 position = Vector2(89, 108)
-frame = 2
 
 [node name="Tree7" parent="Decorations" unique_id=287717630 instance=ExtResource("4_6i3t0")]
 position = Vector2(61, 64)
+frame = 2
 
 [node name="Tree8" parent="Decorations" unique_id=99465366 instance=ExtResource("4_6i3t0")]
 position = Vector2(18, 72)
+frame = 0
 
 [node name="Tree9" parent="Decorations" unique_id=538041335 instance=ExtResource("4_6i3t0")]
 position = Vector2(253, 76)
-frame = 0
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=580175599]
 rotation = 0.7853982
@@ -82,3 +82,11 @@ energy = 0.1
 shadow_enabled = true
 shadow_item_cull_mask = 5
 max_distance = 60.0
+
+[node name="TargetArea" type="Area2D" parent="." unique_id=1466606602]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetArea" unique_id=571508031]
+position = Vector2(330, 55)
+shape = SubResource("RectangleShape2D_d1p6d")
+
+[connection signal="area_entered" from="TargetArea" to="." method="_on_target_area_area_entered"]

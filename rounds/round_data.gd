@@ -4,3 +4,7 @@ extends Resource
 
 @export var enemies: Dictionary[PackedScene, int]
 @export var spawn_delay: float = 0.1 # Time between 2 enemies instantiation
+@export var money_on_finish: int = 50
+
+func get_number_of_enemies() -> int:
+	return enemies.values().reduce(func (accumulator, value) -> int: return accumulator + value)

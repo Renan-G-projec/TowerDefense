@@ -12,8 +12,6 @@
 [node name="Main" type="Node" unique_id=1064918994]
 script = ExtResource("1_ig7tw")
 
-[node name="MapContainer" type="Node" parent="." unique_id=1339865912]
-
 [node name="GUI" type="CanvasLayer" parent="." unique_id=360908504]
 
 [node name="MainUI" type="Control" parent="GUI" unique_id=884637452]
