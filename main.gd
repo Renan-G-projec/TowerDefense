@@ -13,6 +13,8 @@ signal current_money_changed(new_money: int)
 # to activate dev features such as add money
 var _is_dev_build: bool = false
 
+var _is_placing_tower: bool = false
+
 func _ready() -> void:
 	_is_dev_build = OS.has_feature("editor")
 	
@@ -39,13 +41,21 @@ func _process(_delta: float) -> void:
 func pause_game() -> void:
 	SceneManager.change_scene("res://menu.tscn", { "wait_time": 0.0 })
 
-func purchase(tower: TowerData) -> bool:
-	if current_money < tower.price: return false
+func purchase(tower: TowerData) -> void:
+	if _is_placing_tower: return
+	if current_money < tower.price: return
 	
 	var tower_scene: TowerBase = tower.scene.instantiate()
 	map.add_child(tower_scene)
 	tower_scene.is_being_placed = true
 	
-	current_money -= tower.price
-	return true
-		
+	var on_tower_placed: Callable = func() -> void:
+		_is_placing_tower = false
+		current_money -= tower.price
+	
+	var on_tower_placing_cancelled: Callable = func() -> void:
+		_is_placing_tower = false
+	
+	tower_scene.placed.connect(on_tower_placed)
+	tower_scene.cancelled.connect(on_tower_placing_cancelled)
+	return

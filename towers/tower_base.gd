@@ -6,6 +6,7 @@ var enemies: Array
 
 var is_being_placed: bool = false
 signal placed()
+signal cancelled()
 
 func is_on_valid_position() -> bool:
 	return !$PlaceOnMap.has_overlapping_bodies() && !$PlaceOnMap.has_overlapping_areas()
@@ -30,6 +31,10 @@ func _process(delta: float) -> void:
 		
 		if Input.is_action_just_pressed("place_tower") && is_on_valid_position():
 			place()
+		
+		if Input.is_action_just_pressed("ui_cancel"):
+			cancelled.emit()
+			queue_free()
 
 func place() -> void:
 	is_being_placed = false
