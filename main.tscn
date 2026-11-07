@@ -4,8 +4,6 @@
 [ext_resource type="Theme" uid="uid://h6xj7fnqb1wh" path="res://styles/game_theme.tres" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://06houveexdnx" path="res://towers/tower_card.tscn" id="3_h2yge"]
 [ext_resource type="Resource" uid="uid://cnh10qjsdiqon" path="res://towers/data/placeholder1.tres" id="4_7mycd"]
-[ext_resource type="Resource" uid="uid://ypq5tbphp7rh" path="res://towers/data/placeholder2.tres" id="5_272bh"]
-[ext_resource type="Resource" uid="uid://huq7vm0ogyew" path="res://towers/data/placeholder3.tres" id="6_5vw27"]
 [ext_resource type="PackedScene" uid="uid://l15adwdlgwmt" path="res://map/map_base.tscn" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://bxun6tfvdtcpb" path="res://towers/scenes/tower_basic.tscn" id="8_5vw27"]
 
@@ -50,14 +48,6 @@ layout_mode = 2
 [node name="TowerCard2" parent="GUI/MainUI/PanelContainer/MarginContainer/TowerCardContainer" unique_id=106334537 instance=ExtResource("3_h2yge")]
 layout_mode = 2
 data = ExtResource("4_7mycd")
-
-[node name="TowerCard3" parent="GUI/MainUI/PanelContainer/MarginContainer/TowerCardContainer" unique_id=501396240 instance=ExtResource("3_h2yge")]
-layout_mode = 2
-data = ExtResource("5_272bh")
-
-[node name="TowerCard4" parent="GUI/MainUI/PanelContainer/MarginContainer/TowerCardContainer" unique_id=1804946632 instance=ExtResource("3_h2yge")]
-layout_mode = 2
-data = ExtResource("6_5vw27")
 
 [node name="MapBase" parent="." unique_id=577773077 instance=ExtResource("7_272bh")]
 position = Vector2(0, -1)
