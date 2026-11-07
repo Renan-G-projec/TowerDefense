@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://06houveexdnx"]
 
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_7a22i"]
-[ext_resource type="Script" uid="uid://bta2usnrcdlf" path="res://towers/tower_card.gd" id="1_tdnbx"]
+[ext_resource type="Script" uid="uid://bta2usnrcdlf" path="res://towers_icon/tower_card.gd" id="1_tdnbx"]
 [ext_resource type="Theme" uid="uid://h6xj7fnqb1wh" path="res://styles/game_theme.tres" id="2_tnfel"]
 
 [node name="TowerCard" type="Button" unique_id=622190741]

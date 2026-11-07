@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bxun6tfvdtcpb"]
+
+[ext_resource type="PackedScene" uid="uid://tsp0lb5s8sga" path="res://towers_place/tower.tscn" id="1_gsslw"]
+[ext_resource type="Script" uid="uid://bol2ts5wten3w" path="res://towers_place/tower_basic.gd" id="2_u8jxf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u8jxf"]
+radius = 18.439089
+
+[node name="TowerBasic" unique_id=1587955538 instance=ExtResource("1_gsslw")]
+script = ExtResource("2_u8jxf")
+
+[node name="Base" parent="." index="0" unique_id=2112970244]
+scale = Vector2(0.16, 0.16)
+
+[node name="Turrent" parent="." index="1" unique_id=1610330955]
+scale = Vector2(0.16, 0.16)
+
+[node name="Area2D" type="Area2D" parent="." index="2" unique_id=1199777982]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0" unique_id=1310436199]
+shape = SubResource("CircleShape2D_u8jxf")
