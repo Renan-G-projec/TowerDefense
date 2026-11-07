@@ -2,6 +2,7 @@
 class_name TowerBase
 extends Node2D
 
+signal shoot(pos: Vector2, direction:float, bullet_enum: Data.Bullet)
 var enemies: Array
 
 var is_being_placed: bool = false

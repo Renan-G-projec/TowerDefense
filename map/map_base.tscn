@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://l15adwdlgwmt"]
 
 [ext_resource type="Script" uid="uid://c1m075y30jkfd" path="res://map/map_base.gd" id="1_tw1f7"]
-[ext_resource type="PackedScene" uid="uid://bxun6tfvdtcpb" path="res://towers/scenes/tower_archer.tscn" id="2_io6if"]
 [ext_resource type="TileSet" uid="uid://kn4c50k6g2u6" path="res://map/tileset.tres" id="2_o3boa"]
 [ext_resource type="PackedScene" uid="uid://d1j812gokobcg" path="res://bullets/arrow.tscn" id="3_o3boa"]
 [ext_resource type="PackedScene" uid="uid://cj6lfsp5mwaed" path="res://map/tree.tscn" id="4_6i3t0"]
@@ -15,10 +14,6 @@ point_count = 12
 [node name="MapBase" type="Node2D" unique_id=577773077]
 y_sort_enabled = true
 script = ExtResource("1_tw1f7")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=211266880]
-position = Vector2(28, 47)
-zoom = Vector2(3, 3)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=494167912]
 color = Color(0.80803627, 0.80803627, 0.80803627, 1)
@@ -52,15 +47,14 @@ position = Vector2(47, 23)
 
 [node name="Tree2" parent="Decorations" unique_id=1096029115 instance=ExtResource("4_6i3t0")]
 position = Vector2(165, 12)
-frame = 2
+frame = 0
 
 [node name="Tree3" parent="Decorations" unique_id=197305892 instance=ExtResource("4_6i3t0")]
 position = Vector2(282, 44)
-frame = 2
 
 [node name="Tree4" parent="Decorations" unique_id=274028127 instance=ExtResource("4_6i3t0")]
 position = Vector2(326, 113)
-frame = 2
+frame = 0
 
 [node name="Tree5" parent="Decorations" unique_id=1603009426 instance=ExtResource("4_6i3t0")]
 position = Vector2(256, 149)
@@ -75,9 +69,11 @@ frame = 2
 
 [node name="Tree8" parent="Decorations" unique_id=99465366 instance=ExtResource("4_6i3t0")]
 position = Vector2(18, 72)
+frame = 2
 
 [node name="Tree9" parent="Decorations" unique_id=538041335 instance=ExtResource("4_6i3t0")]
 position = Vector2(253, 76)
+frame = 0
 
 [node name="Bullets" type="Node2D" parent="." unique_id=1005244149]
 

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_fw1ev"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xslbe"]
-radius = 8.062258
+radius = 8.0
 
 [node name="Enemy" type="PathFollow2D" unique_id=419441842]
 script = ExtResource("1_7frlh")

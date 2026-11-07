@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cwkqdvlk7s4l1"]
+
+[ext_resource type="PackedScene" uid="uid://tsp0lb5s8sga" path="res://towers/tower_base.tscn" id="1_jkihi"]
+[ext_resource type="Texture2D" uid="uid://dbeexbv8v8qsm" path="res://sprites/towers/mage_tower_full.png" id="2_2otg5"]
+[ext_resource type="Script" uid="uid://udkilsyqedsr" path="res://towers/scenes/tower_mage.gd" id="2_i1gyi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1gyi"]
+atlas = ExtResource("2_2otg5")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k6g2y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1gyi")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2otg5"]
+radius = 50.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i1gyi"]
+
+[node name="TowerBase" unique_id=1587955538 instance=ExtResource("1_jkihi")]
+script = ExtResource("2_i1gyi")
+
+[node name="Base" parent="." index="0" unique_id=1014948134]
+sprite_frames = SubResource("SpriteFrames_k6g2y")
+animation = &"default"
+
+[node name="CollisionShape2D" parent="EnemyDetectionArea" parent_id_path=PackedInt32Array(1020690148) index="0" unique_id=1788439946]
+shape = SubResource("CircleShape2D_2otg5")
+
+[node name="CollisionShape2D" parent="PlaceOnMap" parent_id_path=PackedInt32Array(1973370455) index="0" unique_id=284692196]
+shape = SubResource("CircleShape2D_i1gyi")
+
+[connection signal="timeout" from="ReloadTimer" to="." method="_on_reload_timer_timeout"]

@@ -40,13 +40,12 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g820p"]
-radius = 49.010204
+radius = 50.0
 
 [node name="TowerBasic" unique_id=1587955538 instance=ExtResource("1_yo67h")]
 script = ExtResource("2_yo67h")
 
 [node name="Base" parent="." index="0" unique_id=1014948134]
-scale = Vector2(0.63, 0.5)
 sprite_frames = SubResource("SpriteFrames_crlvv")
 frame = 1
 frame_progress = 1.0

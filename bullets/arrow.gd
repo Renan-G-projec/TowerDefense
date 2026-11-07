@@ -1,4 +1,4 @@
-class_name Bullet
+class_name Arrow
 extends Area2D
 
 var direction: Vector2 = Vector2.RIGHT

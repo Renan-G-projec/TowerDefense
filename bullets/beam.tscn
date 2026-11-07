@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://iy2tkc34urt3"]
+
+[ext_resource type="Texture2D" uid="uid://egbr06xnrk1g" path="res://sprites/towers/mage_tower_projectile.png" id="1_3wru2"]
+[ext_resource type="Script" uid="uid://btxj26pt2tfo5" path="res://bullets/beam.gd" id="1_vrat2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4kepl"]
+radius = 7.0
+height = 14.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrat2"]
+atlas = ExtResource("1_3wru2")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlqx3"]
+atlas = ExtResource("1_3wru2")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xslbe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrat2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mlqx3")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Beam" type="Area2D" unique_id=1703999647]
+script = ExtResource("1_vrat2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=594040789]
+shape = SubResource("CapsuleShape2D_4kepl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=985197017]
+sprite_frames = SubResource("SpriteFrames_xslbe")
+autoplay = "default"

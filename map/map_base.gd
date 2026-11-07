@@ -5,7 +5,8 @@ extends Node2D
 ## TODO: Add all the round changing logic here
 
 var enemy_scene: PackedScene = preload("res://enemies/enemy.tscn")
-var bullet_scene: PackedScene = preload("res://bullets/arrow.tscn")
+var arrow_scene: PackedScene = preload("res://bullets/arrow.tscn")
+var beam_scene: PackedScene = preload("res://bullets/beam.tscn")
 
 @export var rounds: Array[RoundData]
 
@@ -20,7 +21,8 @@ signal round_changed(new_round: int)
 
 
 func _ready() -> void:
-	$Towers/TowerBasic.connect("shoot", create_bullet)
+	$TowerArcher.connect("shoot", create_arrow)
+	$TowerMage.connect("shoot", create_beam)
 	start_round()
 
 
@@ -31,7 +33,12 @@ func start_round() -> void:
 	%EnemyLogicalPath.add_child(enemy)
 
 
-func create_bullet(pos: Vector2, angle: float, bullet_enum: Data.Bullet) -> void:
-	var bullet = bullet_scene.instantiate()
-	bullet.setup(pos, angle, bullet_enum)
-	$Bullets.add_child(bullet)
+func create_arrow(pos: Vector2, angle: float, bullet_enum: Data.Bullet) -> void:
+	var arrow = arrow_scene.instantiate()
+	arrow.setup(pos, angle, bullet_enum)
+	$Bullets.add_child(arrow)
+
+func create_beam(pos: Vector2, angle: float, bullet_enum: Data.Bullet) -> void:
+	var beam = beam_scene.instantiate()
+	beam.setup(pos, angle, bullet_enum)
+	$Bullets.add_child(beam)
