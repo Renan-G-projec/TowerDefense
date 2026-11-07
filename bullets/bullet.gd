@@ -9,7 +9,7 @@ func _process(delta: float) -> void:
 	position += speed * delta * direction
 
 func _on_area_entered(area: Area2D) -> void:
-	var enemy: EnemyBase = area.get_parent() as EnemyBase
+	var enemy: EnemyBase = area as EnemyBase
 	if enemy:
 		enemy.take_damage(damage)
 		queue_free()

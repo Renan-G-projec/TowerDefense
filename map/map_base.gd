@@ -45,8 +45,12 @@ func start_round() -> void:
 
 func spawn_enemy(enemy: PackedScene) -> void:
 	var enemy_instance: EnemyBase = enemy.instantiate()
-	%EnemyLogicalPath.add_child(enemy_instance)
-			
+	var enemy_path_follow := PathFollow2D.new()
+	
+	
+	%EnemyLogicalPath.add_child(enemy_path_follow)
+	enemy_path_follow.add_child(enemy_instance)
+	
 	enemy_instance.died.connect(_on_enemy_died.bind(enemy_instance))
 
 func _process(delta: float) -> void:
