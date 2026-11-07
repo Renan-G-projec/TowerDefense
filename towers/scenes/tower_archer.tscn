@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://bxun6tfvdtcpb"]
+
+[ext_resource type="PackedScene" uid="uid://tsp0lb5s8sga" path="res://towers/tower_base.tscn" id="1_yo67h"]
+[ext_resource type="Script" uid="uid://bol2ts5wten3w" path="res://towers/scenes/tower_archer.gd" id="2_yo67h"]
+[ext_resource type="Texture2D" uid="uid://dhfhnco22hamw" path="res://sprites/towers/archer_tower_attack.png" id="3_15a6t"]
+[ext_resource type="Texture2D" uid="uid://bp0hqif0cfq4t" path="res://sprites/towers/archer_tower_full.png" id="3_jfhgm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jfhgm"]
+atlas = ExtResource("3_15a6t")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pli0r"]
+atlas = ExtResource("3_15a6t")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0m4o"]
+atlas = ExtResource("3_jfhgm")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_crlvv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jfhgm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pli0r")
+}],
+"loop": 0,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0m4o")
+}],
+"loop": 1,
+"name": &"defult",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g820p"]
+radius = 49.010204
+
+[node name="TowerBasic" unique_id=1587955538 instance=ExtResource("1_yo67h")]
+script = ExtResource("2_yo67h")
+
+[node name="Base" parent="." index="0" unique_id=1014948134]
+scale = Vector2(0.63, 0.5)
+sprite_frames = SubResource("SpriteFrames_crlvv")
+frame = 1
+frame_progress = 1.0
+
+[node name="CollisionShape2D" parent="EnemyDetectionArea" parent_id_path=PackedInt32Array(1020690148) index="0" unique_id=1788439946]
+shape = SubResource("CircleShape2D_g820p")
+
+[node name="PointLight2D" parent="." index="3" unique_id=1218855911]
+energy = 0.2
+texture_scale = 3.0
+
+[connection signal="timeout" from="ReloadTimer" to="." method="_on_reload_timer_timeout"]

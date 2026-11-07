@@ -5,7 +5,7 @@ extends Node2D
 ## TODO: Add all the round changing logic here
 
 var enemy_scene = preload("res://enemies/enemy.tscn")
-var bullet_scene = preload("res://bullets/bullet.tscn")
+var bullet_scene = preload("res://bullets/arrow.tscn")
 
 @export var rounds: Array[RoundData]
 

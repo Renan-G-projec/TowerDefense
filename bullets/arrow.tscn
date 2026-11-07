@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d1j812gokobcg"]
+
+[ext_resource type="Script" uid="uid://blrbkn01o7ypv" path="res://bullets/arrow.gd" id="1_eeodi"]
+[ext_resource type="Texture2D" uid="uid://ck7ajgoppqusa" path="res://sprites/towers/archer_tower_projectile.png" id="2_4kepl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_adylm"]
+size = Vector2(3.75, 1.84375)
+
+[node name="Bullet" type="Area2D" unique_id=897676854]
+rotation = 1.5707964
+collision_layer = 2
+script = ExtResource("1_eeodi")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=229450727]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_4kepl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=917125233]
+shape = SubResource("RectangleShape2D_adylm")
