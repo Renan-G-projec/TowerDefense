@@ -24,6 +24,8 @@ extends Node2D
 var _number_of_entities: int = 0
 var _is_on_round: bool = false
 
+signal round_finished()
+signal round_started()
 signal round_changed(new_round: int)
 signal lifes_changed(new_lifes: int)
 signal win()
@@ -37,6 +39,8 @@ func start_round() -> void:
 	var current_round_data: RoundData = rounds[current_round]
 	_number_of_entities = current_round_data.get_number_of_enemies()
 	_is_on_round = true
+	
+	round_started.emit()
 	
 	for enemy in current_round_data.enemies:
 		for enemy_index in current_round_data.enemies.get(enemy, 0):
@@ -81,6 +85,8 @@ func _finish_round() -> void:
 		earned_money.emit(rounds[current_round].money_on_finish)
 	
 		current_round += 1
+		
+		round_finished.emit()
 	
 		if current_round >= rounds.size():
 			win.emit()

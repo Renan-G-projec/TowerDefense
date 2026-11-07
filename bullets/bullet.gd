@@ -1,9 +1,17 @@
 class_name Bullet
 extends Area2D
 
-var direction: Vector2 = Vector2.RIGHT
-@export var speed: float = 80
+var direction: Vector2 = Vector2.RIGHT:
+	set(val):
+		direction = val
+		rotation = direction.angle()
+@export var speed: float = 200
 @export var damage: float = 15
+
+func _ready() -> void:
+	var tween: Tween = create_tween().set_parallel().set_trans(Tween.TRANS_CUBIC)
+	$Sprite2D.scale = Vector2(1.4, 0.6)
+	tween.tween_property($Sprite2D, "scale", Vector2.ONE, 0.3)
 
 func _process(delta: float) -> void:
 	position += speed * delta * direction

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cseg7qvj1fcx0"]
+
+[ext_resource type="PackedScene" uid="uid://d1j812gokobcg" path="res://bullets/bullet.tscn" id="1_su5gd"]
+[ext_resource type="Texture2D" uid="uid://ck7ajgoppqusa" path="res://sprites/towers/archer_tower_projectile.png" id="2_2ys7w"]
+
+[node name="ArcherBullet" unique_id=897676854 instance=ExtResource("1_su5gd")]
+rotation = 0.0
+
+[node name="Sprite2D" parent="." index="0" unique_id=229450727]
+texture = ExtResource("2_2ys7w")

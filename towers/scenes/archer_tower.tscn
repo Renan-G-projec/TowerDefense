@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bxun6tfvdtcpb"]
 
 [ext_resource type="PackedScene" uid="uid://tsp0lb5s8sga" path="res://towers/tower_base.tscn" id="1_gsslw"]
-[ext_resource type="Script" uid="uid://bol2ts5wten3w" path="res://towers/scenes/tower_basic.gd" id="2_u8jxf"]
+[ext_resource type="Script" uid="uid://bol2ts5wten3w" path="res://towers/scenes/archer_tower.gd" id="2_u8jxf"]
+[ext_resource type="PackedScene" uid="uid://cseg7qvj1fcx0" path="res://bullets/archer_bullet.tscn" id="3_50s0d"]
 [ext_resource type="Texture2D" uid="uid://bp0hqif0cfq4t" path="res://sprites/towers/archer_tower_full.png" id="3_cp180"]
-[ext_resource type="PackedScene" uid="uid://d1j812gokobcg" path="res://bullets/bullet.tscn" id="3_ice6g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g820p"]
 radius = 43.0
@@ -11,9 +11,9 @@ radius = 43.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crlvv"]
 size = Vector2(16, 6)
 
-[node name="TowerBasic" unique_id=1587955538 instance=ExtResource("1_gsslw")]
+[node name="ArcherTower" unique_id=1587955538 instance=ExtResource("1_gsslw")]
 script = ExtResource("2_u8jxf")
-bullet = ExtResource("3_ice6g")
+bullet = ExtResource("3_50s0d")
 
 [node name="Base" parent="." index="0" unique_id=2112970244]
 position = Vector2(0, 16)

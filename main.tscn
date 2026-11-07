@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://ypq5tbphp7rh" path="res://towers/data/bomb_data.tres" id="5_272bh"]
 [ext_resource type="Resource" uid="uid://huq7vm0ogyew" path="res://towers/data/magic_data.tres" id="6_5vw27"]
 [ext_resource type="PackedScene" uid="uid://l15adwdlgwmt" path="res://map/map_base.tscn" id="7_272bh"]
-[ext_resource type="PackedScene" uid="uid://bxun6tfvdtcpb" path="res://towers/scenes/tower_basic.tscn" id="8_5vw27"]
+[ext_resource type="PackedScene" uid="uid://bxun6tfvdtcpb" path="res://towers/scenes/archer_tower.tscn" id="8_5vw27"]
 
 [node name="Main" type="Node" unique_id=1064918994]
 script = ExtResource("1_ig7tw")
