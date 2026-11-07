@@ -11,18 +11,16 @@ radius = 43.0
 script = ExtResource("2_u8jxf")
 
 [node name="Base" parent="." index="0" unique_id=2112970244]
-scale = Vector2(0.16, 0.16)
 texture = ExtResource("3_cp180")
 
 [node name="Turrent" parent="." index="1" unique_id=1610330955]
 position = Vector2(14, 0)
-scale = Vector2(0.16, 0.16)
 texture = null
 
 [node name="CollisionShape2D" parent="EnemyDetectionArea" parent_id_path=PackedInt32Array(1020690148) index="0" unique_id=1788439946]
 shape = SubResource("CircleShape2D_g820p")
 
-[node name="PointLight2D" parent="." index="3" unique_id=1218855911]
+[node name="PointLight2D" parent="." index="4" unique_id=1218855911]
 energy = 0.2
 texture_scale = 3.0
 
