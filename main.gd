@@ -80,3 +80,7 @@ func _exit_building_state() -> void:
 	_is_placing_tower = false
 	_building_animations_tween.tween_property($GUI/MainUI/PanelContainer, "position", Vector2(8, 0), 0.1).set_ease(Tween.EASE_OUT)
 	_building_animations_tween.tween_property($GUI/MainUI/PanelContainer, "offset_transform_scale", Vector2.ONE, 0.1)
+
+
+func _on_map_base_game_over() -> void:
+	print("GAME_OVER")

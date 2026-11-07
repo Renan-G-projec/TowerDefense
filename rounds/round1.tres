@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="RoundData" format=3 uid="uid://biv0syppfsnh7"]
+
+[ext_resource type="Script" uid="uid://dfebx08by0my8" path="res://rounds/round_data.gd" id="1_nhkh7"]
+[ext_resource type="PackedScene" uid="uid://c8ttr6f4c42sn" path="res://enemies/enemy_base.tscn" id="1_ravmu"]
+
+[resource]
+script = ExtResource("1_nhkh7")
+enemies = Dictionary[PackedScene, int]({
+ExtResource("1_ravmu"): 4
+})
+metadata/_custom_type_script = "uid://dfebx08by0my8"

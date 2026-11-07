@@ -62,3 +62,5 @@ position = Vector2(0, -1)
 
 [node name="TowerBasic" parent="MapBase" unique_id=1587955538 instance=ExtResource("8_5vw27")]
 position = Vector2(168, 102)
+
+[connection signal="game_over" from="MapBase" to="." method="_on_map_base_game_over"]

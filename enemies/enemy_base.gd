@@ -1,3 +1,4 @@
+# Ad Maiorem Dei Gloriam!
 class_name EnemyBase
 extends PathFollow2D
 
@@ -10,6 +11,7 @@ extends PathFollow2D
 		
 		life = max(0, val)
 		life_changed.emit(life)
+@export var money_on_death: int = 5
 
 @onready var sprite: Sprite2D = $Area/Sprite2D
 
