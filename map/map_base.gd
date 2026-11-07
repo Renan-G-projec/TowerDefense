@@ -23,4 +23,4 @@ func start_round() -> void:
 
 func _ready() -> void:
 	var enemy = enemy_scene.instantiate()
-	$EnemyLogicalPath.add_child(enemy)
+	%EnemyLogicalPath.add_child(enemy)

@@ -1,18 +1,13 @@
 [gd_scene format=3 uid="uid://bxun6tfvdtcpb"]
 
-[ext_resource type="PackedScene" uid="uid://tsp0lb5s8sga" path="res://towers/tower_base.tscn" id="1_gsslw"]
-[ext_resource type="Script" uid="uid://bol2ts5wten3w" path="res://towers/scenes/tower_basic.gd" id="2_u8jxf"]
+[ext_resource type="PackedScene" uid="uid://tsp0lb5s8sga" path="res://towers/tower_base.tscn" id="1_iw6df"]
+[ext_resource type="Script" uid="uid://bol2ts5wten3w" path="res://towers/scenes/tower_basic.gd" id="2_cp180"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g820p"]
+radius = 43.0
 
-[node name="TowerBasic" unique_id=1587955538 instance=ExtResource("1_gsslw")]
-script = ExtResource("2_u8jxf")
-
-[node name="Base" parent="." index="0" unique_id=2112970244]
-scale = Vector2(0.16, 0.16)
-
-[node name="Turrent" parent="." index="1" unique_id=1610330955]
-scale = Vector2(0.16, 0.16)
+[node name="TowerBasic" unique_id=1587955538 instance=ExtResource("1_iw6df")]
+script = ExtResource("2_cp180")
 
 [node name="CollisionShape2D" parent="EnemyDetectionArea" parent_id_path=PackedInt32Array(1020690148) index="0" unique_id=1788439946]
 shape = SubResource("CircleShape2D_g820p")
