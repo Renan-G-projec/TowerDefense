@@ -1,11 +1,11 @@
+class_name Bullet
 extends Area2D
 
 var direction: Vector2
-var speed := 20
+var speed := 40
 
 
-func setup(pos, angle, bullet_enum):
-	position = pos
+func setup(angle: float) -> void:
 	direction = Vector2.DOWN.rotated(angle)
 	rotation = angle
 
