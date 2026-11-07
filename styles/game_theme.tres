@@ -53,5 +53,5 @@ Button/styles/hover = SubResource("StyleBoxFlat_0o385")
 Button/styles/hover_pressed = SubResource("StyleBoxFlat_0o385")
 Button/styles/normal = SubResource("StyleBoxFlat_7mycd")
 Button/styles/normal_mirrored = SubResource("StyleBoxFlat_7mycd")
-Label/font_sizes/font_size = 4
+Label/font_sizes/font_size = 3
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_7b0pg")
