@@ -25,11 +25,8 @@ func start_round() -> void:
 	## An enemy would be a pathfollow2d and should be instantiated on $EnemyLogicalPath? Idk, seems reasonable
 
 func _ready() -> void:
-	var path_follow = PathFollow2D.new()
 	var enemy = enemy_scene.instantiate()
-	enemy.setup(path_follow)
-	path_follow.add_child(enemy)
-	$EnemyLogicalPath.add_child(path_follow)
+	%EnemyLogicalPath.add_child(enemy)
 	$Towers/TowerBasic.connect('shoot', create_bullet)
 	
 func create_bullet(pos: Vector2, angle: float, bullet_enum: Data.Bullet) -> void:

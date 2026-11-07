@@ -6,6 +6,16 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xslbe"]
 size = Vector2(16, 16)
 
+[sub_resource type="Gradient" id="Gradient_crlvv"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_d1p6d"]
+gradient = SubResource("Gradient_crlvv")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.90000004, 0.5)
+metadata/_snap_enabled = true
+
 [node name="TowerBase" type="Node2D" unique_id=1587955538]
 script = ExtResource("1_crlvv")
 
@@ -22,6 +32,11 @@ shape = SubResource("RectangleShape2D_xslbe")
 
 [node name="ReloadTimer" type="Timer" parent="." unique_id=2123406976]
 autostart = true
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1218855911]
+color = Color(1, 1, 0.5176471, 1)
+energy = 0.4
+texture = SubResource("GradientTexture2D_d1p6d")
 
 [connection signal="area_entered" from="EnemyDetectionArea" to="." method="_on_enemy_detection_area_area_entered"]
 [connection signal="area_shape_exited" from="EnemyDetectionArea" to="." method="_on_enemy_detection_area_area_shape_exited"]

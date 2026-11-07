@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://cj6lfsp5mwaed"]
+
+[ext_resource type="Texture2D" uid="uid://b557fv28lhg5e" path="res://map/tree_1.png" id="1_3jcs6"]
+[ext_resource type="Texture2D" uid="uid://df4ch2fpgygwp" path="res://map/tree_2.png" id="2_tomtr"]
+[ext_resource type="Texture2D" uid="uid://b0r2kjq42nbli" path="res://map/tree_3.png" id="3_xcdkv"]
+[ext_resource type="Texture2D" uid="uid://btr618w833488" path="res://map/tree_4.png" id="4_xup7d"]
+[ext_resource type="Script" uid="uid://boc8ndf8oo2t0" path="res://map/tree.gd" id="5_tomtr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d1p6d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3jcs6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_tomtr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xcdkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xup7d")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_tomtr"]
+polygon = PackedVector2Array(0, -37, 4, -35, 6, -31, 9, -31, 10, -25, 11, -19, 11, -16, 12, -12, 5, -11, 7, -2, 0, -2, -6, -2, -3, -6, -4, -10, -11, -11, -10, -21, -10, -30, -5, -35)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xcdkv"]
+polygon = PackedVector2Array(-1, -34, 2, -37, 8, -37, 11, -35, 19, -31, 18, -23, 17, -18, 8, -19, 4, -24, 4, -21, 3, -14, 11, -14, 12, -8, 10, -5, 4, -4, 2, -7, 0, -1, -6, -1, -5, -10, -11, -10, -11, -16, -16, -16, -19, -21, -19, -26, -13, -31, -17, -33, -17, -38, -9, -40, -1, -38)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xup7d"]
+polygon = PackedVector2Array(-1, -36, 8, -37, 10, -34, 11, -31, 15, -28, 17, -20, 15, -15, 11, -15, 7, -20, 5, -18, 6, -13, 4, -11, 5, -8, 5, -4, 6, -3, 0, -3, -4, -3, -3, -6, -4, -10, -5, -24, -7, -17, -14, -16, -16, -23, -15, -30, -9, -35)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_yryib"]
+polygon = PackedVector2Array(0, -37, 4, -35, 6, -31, 9, -31, 10, -25, 11, -19, 11, -16, 13, -9, 6, -9, 7, -2, 0, -2, -6, -2, -3, -6, -4, -10, -12, -10, -10, -21, -10, -30, -5, -35)
+
+[node name="Tree" type="AnimatedSprite2D" unique_id=2051237497]
+light_mask = 2
+sprite_frames = SubResource("SpriteFrames_d1p6d")
+frame = 3
+offset = Vector2(0, -20)
+script = ExtResource("5_tomtr")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=369080199]
+visible = false
+occluder = SubResource("OccluderPolygon2D_tomtr")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="." unique_id=944935200]
+visible = false
+position = Vector2(0, 1)
+occluder = SubResource("OccluderPolygon2D_xcdkv")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="." unique_id=63265998]
+visible = false
+occluder = SubResource("OccluderPolygon2D_xup7d")
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="." unique_id=1825426985]
+occluder = SubResource("OccluderPolygon2D_yryib")

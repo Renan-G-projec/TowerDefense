@@ -58,4 +58,3 @@ layout_mode = 2
 data = ExtResource("6_5vw27")
 
 [node name="MapBase" parent="." unique_id=577773077 instance=ExtResource("7_272bh")]
-position = Vector2(3, 34)
