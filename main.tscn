@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://ypq5tbphp7rh" path="res://towers/data/placeholder2.tres" id="5_272bh"]
 [ext_resource type="Resource" uid="uid://huq7vm0ogyew" path="res://towers/data/placeholder3.tres" id="6_5vw27"]
 [ext_resource type="PackedScene" uid="uid://l15adwdlgwmt" path="res://map/map_base.tscn" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://bxun6tfvdtcpb" path="res://towers/scenes/tower_basic.tscn" id="8_5vw27"]
 
 [node name="Main" type="Node" unique_id=1064918994]
 script = ExtResource("1_ig7tw")
@@ -59,3 +60,6 @@ data = ExtResource("6_5vw27")
 
 [node name="MapBase" parent="." unique_id=577773077 instance=ExtResource("7_272bh")]
 position = Vector2(0, -1)
+
+[node name="TowerBasic" parent="MapBase" unique_id=1587955538 instance=ExtResource("8_5vw27")]
+position = Vector2(172, 110)
