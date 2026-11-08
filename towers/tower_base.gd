@@ -3,6 +3,7 @@ class_name TowerBase
 extends Node2D
 
 @export var bullet: PackedScene = preload("res://bullets/bullet.tscn")
+
 var enemies: Array[EnemyBase]
 
 var is_being_placed: bool = false

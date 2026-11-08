@@ -2,11 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://bb0k3838qoyjo" path="res://sprites/towers/bomb_tower_icon.png" id="1_0ykqp"]
 [ext_resource type="Script" uid="uid://doiehsh2k6vxu" path="res://towers/tower_data.gd" id="1_xuxa8"]
+[ext_resource type="PackedScene" uid="uid://dgs65uiqq21ov" path="res://towers/scenes/tower_bomb.tscn" id="2_ajmho"]
 
 [resource]
 script = ExtResource("1_xuxa8")
 icon = ExtResource("1_0ykqp")
 name = "Bomber"
 description = "A bomb tower! What it could do...?"
+scene = ExtResource("2_ajmho")
 price = 60
 metadata/_custom_type_script = "uid://doiehsh2k6vxu"
