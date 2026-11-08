@@ -1,4 +1,5 @@
-class_name Arrow
+# Ad Maiorem Dei Gloriam!
+class_name Bullet
 extends Area2D
 
 var direction: Vector2 = Vector2.RIGHT:
@@ -8,13 +9,6 @@ var direction: Vector2 = Vector2.RIGHT:
 
 @export var speed: float = 200
 @export var damage: float = 15
-
-
-func setup(pos: Vector2, angle: float, _bullet_enum) -> void:
-	position = pos
-	direction = Vector2.DOWN.rotated(angle)
-	rotation = angle
-
 
 func _ready() -> void:
 	var tween: Tween = create_tween().set_parallel().set_trans(Tween.TRANS_CUBIC)

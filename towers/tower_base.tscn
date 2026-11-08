@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://tsp0lb5s8sga"]
 
 [ext_resource type="Script" uid="uid://c10mlaqdcqpph" path="res://towers/tower_base.gd" id="1_crlvv"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_crlvv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ggw8w"]
 radius = 16.0
@@ -21,8 +22,8 @@ metadata/_snap_enabled = true
 y_sort_enabled = true
 script = ExtResource("1_crlvv")
 
-[node name="Base" type="AnimatedSprite2D" parent="." unique_id=1014948134]
-animation = &"attack"
+[node name="Base" type="Sprite2D" parent="." unique_id=1729212226]
+texture = ExtResource("2_crlvv")
 
 [node name="EnemyDetectionArea" type="Area2D" parent="." unique_id=1020690148]
 

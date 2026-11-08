@@ -28,12 +28,6 @@ var _slow_time_left: float = 0.0
 
 func _process(delta: float) -> void:
 	parent.progress += 20 * delta * _slow_multiplier
-	
-	if progress_ratio >= 0.99:
-		queue_free()
-	
-	if Input.is_action_just_pressed("ui_left"):
-		take_damage(10)
 
 func take_damage(damage_amout: float) -> void:
 	life -= damage_amout
@@ -46,7 +40,6 @@ func take_damage(damage_amout: float) -> void:
 	_tween = create_tween().set_parallel().set_trans(Tween.TRANS_QUAD)
 	_tween.tween_property(sprite, "scale", Vector2.ONE, 0.3)
 	_tween.tween_property(sprite, "self_modulate", Color.WHITE, 0.3)
-
 
 func apply_slow(amount: float, duration: float, tint:Color = Color(0.6,0.8,1.0)) -> void:
 	_slow_multiplier = min(_slow_multiplier , 1 - amount)

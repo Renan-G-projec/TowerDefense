@@ -2,11 +2,13 @@
 
 [ext_resource type="Script" uid="uid://doiehsh2k6vxu" path="res://towers/tower_data.gd" id="1_bbb8f"]
 [ext_resource type="Texture2D" uid="uid://b57qlxf1vfbjs" path="res://sprites/towers/magic_tower_icon.png" id="1_k1cup"]
+[ext_resource type="PackedScene" uid="uid://cwkqdvlk7s4l1" path="res://towers/scenes/tower_mage.tscn" id="2_51ucs"]
 
 [resource]
 script = ExtResource("1_bbb8f")
 icon = ExtResource("1_k1cup")
 name = "Magic"
 description = "A magic tower lol"
+scene = ExtResource("2_51ucs")
 price = 40
 metadata/_custom_type_script = "uid://doiehsh2k6vxu"

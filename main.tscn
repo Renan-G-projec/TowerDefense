@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://ypq5tbphp7rh" path="res://towers/data/bomb_data.tres" id="5_272bh"]
 [ext_resource type="Resource" uid="uid://huq7vm0ogyew" path="res://towers/data/magic_data.tres" id="6_5vw27"]
 [ext_resource type="PackedScene" uid="uid://l15adwdlgwmt" path="res://map/map_base.tscn" id="7_272bh"]
-[ext_resource type="PackedScene" uid="uid://bxun6tfvdtcpb" path="res://towers/scenes/tower_archer.tscn" id="8_5vw27"]
+[ext_resource type="PackedScene" uid="uid://ci533m00s738" path="res://towers/scenes/tower_archer.tscn" id="8_5vw27"]
 [ext_resource type="PackedScene" uid="uid://cwkqdvlk7s4l1" path="res://towers/scenes/tower_mage.tscn" id="9_kek77"]
 
 [node name="Main" type="Node" unique_id=1064918994]
@@ -116,14 +116,12 @@ text = "0"
 
 [node name="MapBase" parent="." unique_id=577773077 instance=ExtResource("7_272bh")]
 position = Vector2(0, -1)
-rounds = null
-current_round = null
-
-[node name="TowerArcher" parent="MapBase" unique_id=1587955538 instance=ExtResource("8_5vw27")]
-position = Vector2(164, 113)
 
 [node name="TowerMage" parent="MapBase" unique_id=1059447802 instance=ExtResource("9_kek77")]
 position = Vector2(124, 62)
+
+[node name="TowerArcher" parent="MapBase" unique_id=1587955538 instance=ExtResource("8_5vw27")]
+position = Vector2(163, 103)
 
 [connection signal="current_money_changed" from="." to="." method="_on_current_money_changed"]
 [connection signal="earned_money" from="MapBase" to="." method="_on_map_base_earned_money"]

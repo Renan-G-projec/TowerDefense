@@ -1,28 +1,21 @@
 class_name Beam
-extends Area2D
-
-var direction: Vector2 = Vector2.RIGHT
-@export var speed: float = 80
-@export var damage: float = 15
+extends Bullet
 
 @export_group("Slow Effect")
 @export_range(0.0, 1.0) var slow_amount: float = 0.5
 @export var slow_duration: float = 2.0
 @export var slow_tint: Color = Color(0.6, 0.8, 1.0)
 
-
-func setup(pos: Vector2, angle: float, bullet_enum) -> void:
-	position = pos
-	direction = Vector2.DOWN.rotated(angle)
-	rotation = angle
-
+func _ready() -> void:
+	var tween: Tween = create_tween().set_parallel().set_trans(Tween.TRANS_CUBIC)
+	$AnimatedSprite2D.scale = Vector2(1.4, 0.6)
+	tween.tween_property($Sprite2D, "scale", Vector2.ONE, 0.3)
 
 func _process(delta: float) -> void:
 	position += speed * delta * direction
 
-
 func _on_area_entered(area: Area2D) -> void:
-	var enemy: EnemyBase = area.get_parent() as EnemyBase
+	var enemy: EnemyBase = area as EnemyBase
 	if enemy:
 		enemy.take_damage(damage)
 		enemy.apply_slow(slow_amount, slow_duration, slow_tint)

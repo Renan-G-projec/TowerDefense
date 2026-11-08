@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bnyglxusqdm7u" path="res://sprites/towers/archer_tower_icon.png" id="1_b4w4e"]
 [ext_resource type="Script" uid="uid://doiehsh2k6vxu" path="res://towers/tower_data.gd" id="1_ojx5r"]
-[ext_resource type="PackedScene" uid="uid://bxun6tfvdtcpb" path="res://towers/scenes/archer_tower.tscn" id="2_nqhck"]
+[ext_resource type="PackedScene" uid="uid://ci533m00s738" path="res://towers/scenes/tower_archer.tscn" id="2_nqhck"]
 
 [resource]
 script = ExtResource("1_ojx5r")

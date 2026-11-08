@@ -55,35 +55,32 @@ frame = 0
 
 [node name="Tree2" parent="Decorations" unique_id=1096029115 instance=ExtResource("4_6i3t0")]
 position = Vector2(165, 12)
-frame = 0
+frame = 2
 
 [node name="Tree3" parent="Decorations" unique_id=197305892 instance=ExtResource("4_6i3t0")]
 position = Vector2(282, 44)
 
 [node name="Tree4" parent="Decorations" unique_id=274028127 instance=ExtResource("4_6i3t0")]
 position = Vector2(326, 113)
-frame = 0
 
 [node name="Tree5" parent="Decorations" unique_id=1603009426 instance=ExtResource("4_6i3t0")]
 position = Vector2(256, 149)
+frame = 2
 
 [node name="Tree6" parent="Decorations" unique_id=792368847 instance=ExtResource("4_6i3t0")]
 position = Vector2(89, 108)
-frame = 0
 
 [node name="Tree7" parent="Decorations" unique_id=287717630 instance=ExtResource("4_6i3t0")]
 position = Vector2(61, 64)
-frame = 2
+frame = 0
 
 [node name="Tree8" parent="Decorations" unique_id=99465366 instance=ExtResource("4_6i3t0")]
 position = Vector2(18, 72)
-frame = 2
+frame = 0
 
 [node name="Tree9" parent="Decorations" unique_id=538041335 instance=ExtResource("4_6i3t0")]
 position = Vector2(253, 76)
 frame = 0
-
-[node name="Bullets" type="Node2D" parent="." unique_id=1005244149]
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=580175599]
 rotation = 0.7853982

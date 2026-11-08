@@ -4,9 +4,6 @@ extends Node2D
 
 ## TODO: Add all the round changing logic here
 
-var arrow_scene: PackedScene = preload("res://bullets/arrow.tscn")
-var beam_scene: PackedScene = preload("res://bullets/beam.tscn")
-
 @export var rounds: Array[RoundData]
 
 @export var current_round: int = 0:
@@ -37,12 +34,6 @@ signal win()
 signal game_over()
 signal earned_money(quantity: int)
 
-
-func _ready() -> void:
-	$TowerArcher.connect("shoot", create_arrow)
-	$TowerMage.connect("shoot", create_beam)
-
-
 # Starts the current round, spawning the enemies periodically and connecting the signals of the enemies
 func start_round() -> void:
 	if _is_on_round: return
@@ -57,17 +48,6 @@ func start_round() -> void:
 		for enemy_index in current_round_data.enemies.get(enemy, 0):
 			spawn_enemy(enemy)
 			await get_tree().create_timer(current_round_data.spawn_delay).timeout
-
-
-func create_arrow(pos: Vector2, angle: float, bullet_enum: Data.Bullet) -> void:
-	var arrow = arrow_scene.instantiate()
-	arrow.setup(pos, angle, bullet_enum)
-	$Bullets.add_child(arrow)
-
-func create_beam(pos: Vector2, angle: float, bullet_enum: Data.Bullet) -> void:
-	var beam = beam_scene.instantiate()
-	beam.setup(pos, angle, bullet_enum)
-	$Bullets.add_child(beam)
 
 func spawn_enemy(enemy: PackedScene) -> void:
 	var enemy_instance: EnemyBase = enemy.instantiate()

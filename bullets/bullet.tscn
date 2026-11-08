@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d1j812gokobcg"]
 
-[ext_resource type="Script" uid="uid://blrbkn01o7ypv" path="res://bullets/arrow.gd" id="1_eeodi"]
-[ext_resource type="Texture2D" uid="uid://ck7ajgoppqusa" path="res://sprites/towers/archer_tower_projectile.png" id="2_4kepl"]
+[ext_resource type="Script" uid="uid://blrbkn01o7ypv" path="res://bullets/bullet.gd" id="1_wo3kc"]
+[ext_resource type="Texture2D" uid="uid://ck7ajgoppqusa" path="res://sprites/towers/archer_tower_projectile.png" id="2_ascq4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dkk7v"]
 radius = 2.0
@@ -9,11 +9,11 @@ radius = 2.0
 [node name="Bullet" type="Area2D" unique_id=897676854]
 rotation = 1.5707964
 collision_layer = 2
-script = ExtResource("1_eeodi")
+script = ExtResource("1_wo3kc")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=229450727]
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_4kepl")
+texture = ExtResource("2_ascq4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=917125233]
 shape = SubResource("CircleShape2D_dkk7v")
