@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://biu01mk4arc66"]
+
+[ext_resource type="PackedScene" uid="uid://c8ttr6f4c42sn" path="res://enemies/enemy_base.tscn" id="1_yg84j"]
+[ext_resource type="Texture2D" uid="uid://dx1rwy05543lc" path="res://enemies/enemie sprites/imp.png" id="2_yg84j"]
+
+[node name="Imp" unique_id=116229569 instance=ExtResource("1_yg84j")]
+life = 20.0
+money_on_death = 12
+damage = 6
+speed = 95.0
+
+[node name="Sprite2D" parent="." index="0" unique_id=619571582]
+position = Vector2(0, 0)
+rotation = 0.0
+texture = ExtResource("2_yg84j")
+offset = Vector2(-0.26387405, -8.781387)

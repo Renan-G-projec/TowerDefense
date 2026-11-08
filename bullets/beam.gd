@@ -6,6 +6,10 @@ extends Bullet
 @export var slow_duration: float = 2.0
 @export var slow_tint: Color = Color(0.6, 0.8, 1.0)
 
+func _init() -> void:
+	speed = 250
+	damage = 6
+
 func _ready() -> void:
 	var tween: Tween = create_tween().set_parallel().set_trans(Tween.TRANS_CUBIC)
 	$AnimatedSprite2D.scale = Vector2(1.4, 0.6)
@@ -21,13 +25,9 @@ func _on_area_entered(area: Area2D) -> void:
 		enemy.apply_slow(slow_amount, slow_duration, slow_tint)
 		queue_free()
 
-
 func _on_lifetime_timeout() -> void:
 	queue_free()
 
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
-	queue_free()
-	
-
-	
+	queue_free()	

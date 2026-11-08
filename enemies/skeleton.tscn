@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ypuekxunmtjy"]
+
+[ext_resource type="PackedScene" uid="uid://c8ttr6f4c42sn" path="res://enemies/enemy_base.tscn" id="1_eq7ty"]
+[ext_resource type="Texture2D" uid="uid://33vtp8t13a1g" path="res://enemies/enemie sprites/skeleton.png" id="2_eq7ty"]
+
+[node name="Skeleton" unique_id=116229569 instance=ExtResource("1_eq7ty")]
+life = 60.0
+money_on_death = 14
+damage = 5
+speed = 55.0
+
+[node name="Sprite2D" parent="." index="0" unique_id=619571582]
+position = Vector2(0, 0)
+rotation = 0.0
+texture = ExtResource("2_eq7ty")
+offset = Vector2(-0.26387405, -8.781387)

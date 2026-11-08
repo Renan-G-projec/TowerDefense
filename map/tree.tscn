@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cj6lfsp5mwaed"]
 
-[ext_resource type="Texture2D" uid="uid://b557fv28lhg5e" path="res://map/tree_1.png" id="1_3jcs6"]
-[ext_resource type="Texture2D" uid="uid://df4ch2fpgygwp" path="res://map/tree_2.png" id="2_tomtr"]
-[ext_resource type="Texture2D" uid="uid://b0r2kjq42nbli" path="res://map/tree_3.png" id="3_xcdkv"]
-[ext_resource type="Texture2D" uid="uid://btr618w833488" path="res://map/tree_4.png" id="4_xup7d"]
+[ext_resource type="Texture2D" uid="uid://b557fv28lhg5e" path="res://map/decerations/tree_1.png" id="1_3jcs6"]
+[ext_resource type="Texture2D" uid="uid://df4ch2fpgygwp" path="res://map/decerations/tree_2.png" id="2_tomtr"]
+[ext_resource type="Texture2D" uid="uid://b0r2kjq42nbli" path="res://map/decerations/tree_3.png" id="3_xcdkv"]
+[ext_resource type="Texture2D" uid="uid://btr618w833488" path="res://map/decerations/tree_4.png" id="4_xup7d"]
 [ext_resource type="Script" uid="uid://boc8ndf8oo2t0" path="res://map/tree.gd" id="5_tomtr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d1p6d"]

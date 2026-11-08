@@ -7,8 +7,8 @@ var direction: Vector2 = Vector2.RIGHT:
 		direction = val
 		rotation = direction.angle()
 
-@export var speed: float = 200
-@export var damage: float = 15
+@export var speed: float = 300
+@export var damage: float = 10
 
 func _ready() -> void:
 	var tween: Tween = create_tween().set_parallel().set_trans(Tween.TRANS_CUBIC)

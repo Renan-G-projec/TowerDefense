@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="RoundData" format=3 uid="uid://0gw0hv30b4q0"]
+
+[ext_resource type="PackedScene" uid="uid://bw855t4biwtvn" path="res://enemies/warrior.tscn" id="2_i1ktx"]
+[ext_resource type="PackedScene" uid="uid://bdlhnyc0sdsal" path="res://enemies/brute.tscn" id="3_23sdl"]
+[ext_resource type="PackedScene" uid="uid://biu01mk4arc66" path="res://enemies/imp.tscn" id="3_p3fnh"]
+[ext_resource type="PackedScene" uid="uid://ypuekxunmtjy" path="res://enemies/skeleton.tscn" id="4_qvktk"]
+[ext_resource type="Script" uid="uid://dfebx08by0my8" path="res://rounds/round_data.gd" id="5_bwcpt"]
+
+[resource]
+script = ExtResource("5_bwcpt")
+enemies = Dictionary[PackedScene, int]({
+ExtResource("4_qvktk"): 4,
+ExtResource("2_i1ktx"): 4,
+ExtResource("3_23sdl"): 3,
+ExtResource("3_p3fnh"): 7
+})
+metadata/_custom_type_script = "uid://dfebx08by0my8"

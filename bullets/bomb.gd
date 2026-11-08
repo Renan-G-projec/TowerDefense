@@ -11,6 +11,10 @@ var _exploded: bool = false
 
 @onready var _sprite: AnimatedSprite2D = $AnimatedSprite2D
 
+func _init() -> void:
+	speed = 140
+	damage = 30
+
 func _ready() -> void:
 	if _sprite.sprite_frames.has_animation("fly"):
 		_sprite.play("fly")

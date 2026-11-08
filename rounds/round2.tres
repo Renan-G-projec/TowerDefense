@@ -1,14 +1,16 @@
 [gd_resource type="Resource" script_class="RoundData" format=3 uid="uid://djpnfirr2jmqo"]
 
 [ext_resource type="Script" uid="uid://dfebx08by0my8" path="res://rounds/round_data.gd" id="1_2je6r"]
-[ext_resource type="PackedScene" uid="uid://biu01mk4arc66" path="res://enemies/goblin_1.tscn" id="1_teuh2"]
-[ext_resource type="PackedScene" uid="uid://bw855t4biwtvn" path="res://enemies/goblin_2.tscn" id="2_y3g68"]
+[ext_resource type="PackedScene" uid="uid://biu01mk4arc66" path="res://enemies/imp.tscn" id="1_teuh2"]
+[ext_resource type="PackedScene" uid="uid://eyiabbskilv5" path="res://enemies/scout.tscn" id="1_y3g68"]
+[ext_resource type="PackedScene" uid="uid://bw855t4biwtvn" path="res://enemies/warrior.tscn" id="2_y3g68"]
 
 [resource]
 script = ExtResource("1_2je6r")
 enemies = Dictionary[PackedScene, int]({
-ExtResource("1_teuh2"): 4,
-ExtResource("2_y3g68"): 1
+ExtResource("1_y3g68"): 4,
+ExtResource("2_y3g68"): 2,
+ExtResource("1_teuh2"): 1
 })
 spawn_delay = 3.0
 money_on_finish = 20

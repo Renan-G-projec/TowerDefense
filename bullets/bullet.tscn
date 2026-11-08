@@ -10,8 +10,6 @@ radius = 2.0
 rotation = 1.5707964
 collision_layer = 2
 script = ExtResource("1_wo3kc")
-speed = null
-damage = null
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=229450727]
 scale = Vector2(0.25, 0.25)

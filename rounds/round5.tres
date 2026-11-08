@@ -1,9 +1,19 @@
 [gd_resource type="Resource" script_class="RoundData" format=3 uid="uid://kxhgyukxtko0"]
 
 [ext_resource type="Script" uid="uid://dfebx08by0my8" path="res://rounds/round_data.gd" id="1_1kp5i"]
+[ext_resource type="PackedScene" uid="uid://bw855t4biwtvn" path="res://enemies/warrior.tscn" id="2_6qdoh"]
+[ext_resource type="PackedScene" uid="uid://biu01mk4arc66" path="res://enemies/imp.tscn" id="3_h5r4x"]
+[ext_resource type="PackedScene" uid="uid://bdlhnyc0sdsal" path="res://enemies/brute.tscn" id="4_6qdoh"]
+[ext_resource type="PackedScene" uid="uid://ypuekxunmtjy" path="res://enemies/skeleton.tscn" id="4_d6g3m"]
 
 [resource]
 script = ExtResource("1_1kp5i")
+enemies = Dictionary[PackedScene, int]({
+ExtResource("2_6qdoh"): 6,
+ExtResource("3_h5r4x"): 6,
+ExtResource("4_d6g3m"): 5,
+ExtResource("4_6qdoh"): 8
+})
 spawn_delay = 1.0
-money_on_finish = 30
+money_on_finish = 60
 metadata/_custom_type_script = "uid://dfebx08by0my8"

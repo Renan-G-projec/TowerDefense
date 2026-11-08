@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://eyiabbskilv5"]
 
 [ext_resource type="PackedScene" uid="uid://c8ttr6f4c42sn" path="res://enemies/enemy_base.tscn" id="1_moua7"]
-[ext_resource type="Texture2D" uid="uid://dwhv2aj8qmy3g" path="res://enemies/goblin_3.png" id="2_6ylvy"]
+[ext_resource type="Texture2D" uid="uid://dwhv2aj8qmy3g" path="res://enemies/enemie sprites/goblin_3.png" id="2_6ylvy"]
 
 [node name="Goblin3" unique_id=116229569 instance=ExtResource("1_moua7")]
-life = 70.0
-damage = 15
-speed = 30.0
+life = 15.0
+damage = 2
+speed = 110.0
 
 [node name="Sprite2D" parent="." index="0" unique_id=619571582]
 position = Vector2(0, 0)
