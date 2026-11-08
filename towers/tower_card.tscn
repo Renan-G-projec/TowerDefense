@@ -5,9 +5,9 @@
 [ext_resource type="Theme" uid="uid://h6xj7fnqb1wh" path="res://styles/game_theme.tres" id="2_tnfel"]
 
 [node name="TowerCard" type="Button" unique_id=622190741]
-custom_minimum_size = Vector2(30, 40)
+custom_minimum_size = Vector2(30, 30)
 offset_right = 30.0
-offset_bottom = 40.0
+offset_bottom = 30.0
 theme = ExtResource("2_tnfel")
 script = ExtResource("1_tdnbx")
 

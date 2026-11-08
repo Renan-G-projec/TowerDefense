@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="TowerData" format=3 uid="uid://cnh10qjsdiqon"]
 
+[ext_resource type="Texture2D" uid="uid://bnyglxusqdm7u" path="res://sprites/towers/archer_tower_icon.png" id="1_b4w4e"]
 [ext_resource type="Script" uid="uid://doiehsh2k6vxu" path="res://towers/tower_data.gd" id="1_ojx5r"]
-[ext_resource type="Texture2D" uid="uid://bp0hqif0cfq4t" path="res://sprites/towers/archer_tower_full.png" id="1_qt7im"]
-[ext_resource type="PackedScene" uid="uid://bxun6tfvdtcpb" path="res://towers/scenes/tower_basic.tscn" id="2_nqhck"]
+[ext_resource type="PackedScene" uid="uid://bxun6tfvdtcpb" path="res://towers/scenes/archer_tower.tscn" id="2_nqhck"]
 
 [resource]
 script = ExtResource("1_ojx5r")
-icon = ExtResource("1_qt7im")
+icon = ExtResource("1_b4w4e")
 name = "Archer"
 description = "The first tower!"
 scene = ExtResource("2_nqhck")

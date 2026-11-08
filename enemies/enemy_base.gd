@@ -1,5 +1,6 @@
+# Ad Maiorem Dei Gloriam!
 class_name EnemyBase
-extends PathFollow2D
+extends Area2D
 
 @export var life: float = 100:
 	set(val):
@@ -11,9 +12,12 @@ extends PathFollow2D
 		life = max(0, val)
 		life_changed.emit(life)
 
+@export var money_on_death: int = 5
+@export var damage: int = 10
 @export var speed: float = 20
 
-@onready var sprite: Sprite2D = $Area/Sprite2D
+@onready var sprite: Sprite2D = $Sprite2D
+@onready var parent: PathFollow2D = get_parent()
 
 signal died()
 signal life_changed(new_life: float)
@@ -23,7 +27,7 @@ var _slow_multiplier: float = 1.0
 var _slow_time_left: float = 0.0
 
 func _process(delta: float) -> void:
-	progress += 20 * delta * _slow_multiplier
+	parent.progress += 20 * delta * _slow_multiplier
 	
 	if progress_ratio >= 0.99:
 		queue_free()

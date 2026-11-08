@@ -3,17 +3,15 @@
 [ext_resource type="Script" uid="uid://ctipm83nw5vof" path="res://main.gd" id="1_ig7tw"]
 [ext_resource type="Theme" uid="uid://h6xj7fnqb1wh" path="res://styles/game_theme.tres" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://06houveexdnx" path="res://towers/tower_card.tscn" id="3_h2yge"]
-[ext_resource type="Resource" uid="uid://cnh10qjsdiqon" path="res://towers/data/placeholder1.tres" id="4_7mycd"]
-[ext_resource type="Resource" uid="uid://ypq5tbphp7rh" path="res://towers/data/placeholder2.tres" id="5_272bh"]
-[ext_resource type="Resource" uid="uid://huq7vm0ogyew" path="res://towers/data/placeholder3.tres" id="6_5vw27"]
+[ext_resource type="Resource" uid="uid://cnh10qjsdiqon" path="res://towers/data/archer_data.tres" id="4_7mycd"]
+[ext_resource type="Resource" uid="uid://ypq5tbphp7rh" path="res://towers/data/bomb_data.tres" id="5_272bh"]
+[ext_resource type="Resource" uid="uid://huq7vm0ogyew" path="res://towers/data/magic_data.tres" id="6_5vw27"]
 [ext_resource type="PackedScene" uid="uid://l15adwdlgwmt" path="res://map/map_base.tscn" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://bxun6tfvdtcpb" path="res://towers/scenes/tower_archer.tscn" id="8_5vw27"]
 [ext_resource type="PackedScene" uid="uid://cwkqdvlk7s4l1" path="res://towers/scenes/tower_mage.tscn" id="9_kek77"]
 
 [node name="Main" type="Node" unique_id=1064918994]
 script = ExtResource("1_ig7tw")
-
-[node name="MapContainer" type="Node" parent="." unique_id=1339865912]
 
 [node name="GUI" type="CanvasLayer" parent="." unique_id=360908504]
 
@@ -32,8 +30,9 @@ anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -152.0
 offset_right = 152.0
-offset_bottom = 45.0
+offset_bottom = 39.0
 grow_horizontal = 2
+offset_transform_enabled = true
 theme = ExtResource("2_0xm2m")
 
 [node name="MarginContainer" type="MarginContainer" parent="GUI/MainUI/PanelContainer" unique_id=782667467]
@@ -51,13 +50,69 @@ layout_mode = 2
 layout_mode = 2
 data = ExtResource("4_7mycd")
 
-[node name="TowerCard3" parent="GUI/MainUI/PanelContainer/MarginContainer/TowerCardContainer" unique_id=501396240 instance=ExtResource("3_h2yge")]
+[node name="TowerCard4" parent="GUI/MainUI/PanelContainer/MarginContainer/TowerCardContainer" unique_id=319129699 instance=ExtResource("3_h2yge")]
+layout_mode = 2
+data = ExtResource("6_5vw27")
+
+[node name="TowerCard3" parent="GUI/MainUI/PanelContainer/MarginContainer/TowerCardContainer" unique_id=622190741 instance=ExtResource("3_h2yge")]
 layout_mode = 2
 data = ExtResource("5_272bh")
 
-[node name="TowerCard4" parent="GUI/MainUI/PanelContainer/MarginContainer/TowerCardContainer" unique_id=1804946632 instance=ExtResource("3_h2yge")]
+[node name="LifeContainer" type="HBoxContainer" parent="GUI/MainUI" unique_id=355522653]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -55.480003
+offset_right = 92.0
+offset_bottom = -15.480087
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="GUI/MainUI/LifeContainer" unique_id=1560810475]
 layout_mode = 2
-data = ExtResource("6_5vw27")
+text = "Lifes:"
+
+[node name="LifeLabel" type="Label" parent="GUI/MainUI/LifeContainer" unique_id=175842390]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="MoneyContainer" type="HBoxContainer" parent="GUI/MainUI" unique_id=1723565653]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 91.0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="GUI/MainUI/MoneyContainer" unique_id=843930382]
+layout_mode = 2
+text = "Money:"
+
+[node name="MoneyLabel" type="Label" parent="GUI/MainUI/MoneyContainer" unique_id=1385087060]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="RoundContainer" type="HBoxContainer" parent="GUI/MainUI" unique_id=723116179]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -70.995
+offset_right = 94.0
+offset_bottom = -30.99501
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="GUI/MainUI/RoundContainer" unique_id=1142224997]
+layout_mode = 2
+text = "Round: "
+
+[node name="RoundLabel" type="Label" parent="GUI/MainUI/RoundContainer" unique_id=512893833]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
 
 [node name="MapBase" parent="." unique_id=577773077 instance=ExtResource("7_272bh")]
 position = Vector2(0, -1)
@@ -69,3 +124,10 @@ position = Vector2(164, 113)
 
 [node name="TowerMage" parent="MapBase" unique_id=1059447802 instance=ExtResource("9_kek77")]
 position = Vector2(124, 62)
+
+[connection signal="current_money_changed" from="." to="." method="_on_current_money_changed"]
+[connection signal="earned_money" from="MapBase" to="." method="_on_map_base_earned_money"]
+[connection signal="game_over" from="MapBase" to="." method="_on_map_base_game_over"]
+[connection signal="lifes_changed" from="MapBase" to="." method="_on_map_base_lifes_changed"]
+[connection signal="round_changed" from="MapBase" to="." method="_on_map_base_round_changed"]
+[connection signal="win" from="MapBase" to="." method="_on_map_base_win"]
