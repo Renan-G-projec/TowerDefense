@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://2bdm1lu10r2k"]
 
 [ext_resource type="PackedScene" uid="uid://tsp0lb5s8sga" path="res://towers/tower_base.tscn" id="1_oec3f"]
+[ext_resource type="PackedScene" uid="uid://byuktrnplypyt" path="res://bullets/bomb.tscn" id="2_7dy58"]
 [ext_resource type="Texture2D" uid="uid://ckohjfq7mhmxw" path="res://sprites/towers/bomb_tower_full.png" id="2_tq8hk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ol2mg"]
@@ -10,6 +11,7 @@ radius = 50.0
 size = Vector2(16, 5)
 
 [node name="TowerBomb" unique_id=1587955538 instance=ExtResource("1_oec3f")]
+bullet = ExtResource("2_7dy58")
 
 [node name="Base" parent="." index="0" unique_id=1729212226]
 texture = ExtResource("2_tq8hk")

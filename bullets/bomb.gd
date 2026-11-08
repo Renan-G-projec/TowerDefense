@@ -53,7 +53,7 @@ func _deal_splash_damage() -> void:
 		if enemy == null:
 			continue
 		
-		var distance := enemy.global_position.distance_squared_to(global_position)
+		var distance := enemy.global_position.distance_to(global_position)
 		var closeness := 1.0 - clampf(distance / splash_radius, 0.0, 1.0)
 		var multiplier := lerpf(edge_damage_multiplier, 1.0, closeness)
 		

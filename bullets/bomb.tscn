@@ -64,8 +64,8 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_xslbe"]
 radius = 5.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_m7mqu"]
-radius = 12.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_7n34e"]
+radius = 11.0
 
 [node name="Bomb" type="Area2D" unique_id=1553673129]
 script = ExtResource("1_rwbnf")
@@ -78,7 +78,9 @@ animation = &"fly"
 position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_xslbe")
 
-[node name="BlastArea" type="CollisionShape2D" parent="." unique_id=1268151069]
-shape = SubResource("CircleShape2D_m7mqu")
+[node name="BlastArea" type="Area2D" parent="." unique_id=408795355]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlastArea" unique_id=1603574538]
+shape = SubResource("CircleShape2D_7n34e")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
