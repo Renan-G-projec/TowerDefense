@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://byuktrnplypyt"]
+
+[ext_resource type="Texture2D" uid="uid://1a2d7gj33uos" path="res://sprites/towers/bomb_tower_projectile.png" id="1_d8ib7"]
+[ext_resource type="Script" uid="uid://k7uiwn83h3q6" path="res://bullets/bomb.gd" id="1_rwbnf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_es61y"]
+atlas = ExtResource("1_d8ib7")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_buw3e"]
+atlas = ExtResource("1_d8ib7")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fivos"]
+atlas = ExtResource("1_d8ib7")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjne6"]
+atlas = ExtResource("1_d8ib7")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rwbnf"]
+atlas = ExtResource("1_d8ib7")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uooff"]
+atlas = ExtResource("1_d8ib7")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xslbe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_es61y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_buw3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fivos")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjne6")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": 0,
+"name": &"exploding",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rwbnf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uooff")
+}],
+"loop": 0,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xslbe"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m7mqu"]
+radius = 12.0
+
+[node name="Bomb" type="Area2D" unique_id=1553673129]
+script = ExtResource("1_rwbnf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=893215675]
+sprite_frames = SubResource("SpriteFrames_xslbe")
+animation = &"fly"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=727909327]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_xslbe")
+
+[node name="BlastArea" type="CollisionShape2D" parent="." unique_id=1268151069]
+shape = SubResource("CircleShape2D_m7mqu")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
