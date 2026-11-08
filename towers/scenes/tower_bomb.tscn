@@ -6,6 +6,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_ol2mg"]
 radius = 50.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mae5d"]
+size = Vector2(16, 5)
+
 [node name="TowerBomb" unique_id=1587955538 instance=ExtResource("1_oec3f")]
 
 [node name="Base" parent="." index="0" unique_id=1729212226]
@@ -13,5 +16,9 @@ texture = ExtResource("2_tq8hk")
 
 [node name="CollisionShape2D" parent="EnemyDetectionArea" parent_id_path=PackedInt32Array(1020690148) index="0" unique_id=1788439946]
 shape = SubResource("CircleShape2D_ol2mg")
+
+[node name="CollisionShape2D" parent="PlaceOnMap" parent_id_path=PackedInt32Array(1973370455) index="0" unique_id=284692196]
+position = Vector2(0, 13.5)
+shape = SubResource("RectangleShape2D_mae5d")
 
 [connection signal="timeout" from="ReloadTimer" to="." method="_on_reload_timer_timeout"]
