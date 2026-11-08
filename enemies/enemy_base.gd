@@ -26,8 +26,16 @@ var _tween: Tween
 var _slow_multiplier: float = 1.0
 var _slow_time_left: float = 0.0
 
+var _sway: Tween
+
+func _ready() -> void:
+	await get_tree().create_timer(randf_range(0.0, 0.4))
+	_sway = create_tween().set_loops().set_trans(Tween.TRANS_QUAD)
+	_sway.tween_property($Sprite2D, "rotation", -0.2, 0.4)
+	_sway.tween_property($Sprite2D, "rotation", 0.2, 0.4)
+
 func _process(delta: float) -> void:
-	parent.progress += 20 * delta * _slow_multiplier
+	parent.progress += speed * delta * _slow_multiplier
 
 func take_damage(damage_amout: float) -> void:
 	life -= damage_amout

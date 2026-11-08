@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RoundData" format=3 uid="uid://d0hkpl23vkf3x"]
+
+[ext_resource type="Script" uid="uid://dfebx08by0my8" path="res://rounds/round_data.gd" id="1_hylxi"]
+[ext_resource type="PackedScene" uid="uid://biu01mk4arc66" path="res://enemies/goblin_1.tscn" id="1_lrjkk"]
+[ext_resource type="PackedScene" uid="uid://eyiabbskilv5" path="res://enemies/goblin_3.tscn" id="2_mdef7"]
+
+[resource]
+script = ExtResource("1_hylxi")
+enemies = Dictionary[PackedScene, int]({
+ExtResource("1_lrjkk"): 2,
+ExtResource("2_mdef7"): 4
+})
+money_on_finish = 30
+metadata/_custom_type_script = "uid://dfebx08by0my8"

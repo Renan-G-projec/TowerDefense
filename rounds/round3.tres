@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="RoundData" format=3 uid="uid://dj7i7vdupvkbg"]
+
+[ext_resource type="Script" uid="uid://dfebx08by0my8" path="res://rounds/round_data.gd" id="1_c877t"]
+[ext_resource type="PackedScene" uid="uid://biu01mk4arc66" path="res://enemies/goblin_1.tscn" id="1_nyojn"]
+[ext_resource type="PackedScene" uid="uid://bw855t4biwtvn" path="res://enemies/goblin_2.tscn" id="2_7kad1"]
+[ext_resource type="PackedScene" uid="uid://eyiabbskilv5" path="res://enemies/goblin_3.tscn" id="3_jk2fy"]
+
+[resource]
+script = ExtResource("1_c877t")
+enemies = Dictionary[PackedScene, int]({
+ExtResource("1_nyojn"): 2,
+ExtResource("2_7kad1"): 3,
+ExtResource("3_jk2fy"): 1
+})
+money_on_finish = 25
+metadata/_custom_type_script = "uid://dfebx08by0my8"

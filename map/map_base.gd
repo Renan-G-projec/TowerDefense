@@ -53,6 +53,8 @@ func spawn_enemy(enemy: PackedScene) -> void:
 	var enemy_instance: EnemyBase = enemy.instantiate()
 	var enemy_path_follow := PathFollow2D.new()
 	
+	enemy_path_follow.rotates = false
+	
 	
 	%EnemyLogicalPath.add_child(enemy_path_follow)
 	enemy_path_follow.add_child(enemy_instance)

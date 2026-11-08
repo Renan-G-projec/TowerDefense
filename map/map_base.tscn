@@ -6,6 +6,9 @@
 [ext_resource type="Resource" uid="uid://biv0syppfsnh7" path="res://rounds/round1.tres" id="3_74j3o"]
 [ext_resource type="PackedScene" uid="uid://cj6lfsp5mwaed" path="res://map/tree.tscn" id="4_6i3t0"]
 [ext_resource type="Resource" uid="uid://djpnfirr2jmqo" path="res://rounds/round2.tres" id="4_74j3o"]
+[ext_resource type="Resource" uid="uid://dj7i7vdupvkbg" path="res://rounds/round3.tres" id="5_mgqgu"]
+[ext_resource type="Resource" uid="uid://d0hkpl23vkf3x" path="res://rounds/round4.tres" id="6_8rukr"]
+[ext_resource type="Resource" uid="uid://kxhgyukxtko0" path="res://rounds/round5.tres" id="7_7qijr"]
 
 [sub_resource type="Curve2D" id="Curve2D_7frlh"]
 _data = {
@@ -18,7 +21,7 @@ point_count = 12
 [node name="MapBase" type="Node2D" unique_id=577773077]
 y_sort_enabled = true
 script = ExtResource("1_tw1f7")
-rounds = Array[ExtResource("2_5jct1")]([ExtResource("3_74j3o"), ExtResource("4_74j3o")])
+rounds = Array[ExtResource("2_5jct1")]([ExtResource("3_74j3o"), ExtResource("4_74j3o"), ExtResource("5_mgqgu"), ExtResource("6_8rukr"), ExtResource("7_7qijr"), ExtResource("5_mgqgu"), ExtResource("4_74j3o")])
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=494167912]
 color = Color(0.80803627, 0.80803627, 0.80803627, 1)
@@ -55,20 +58,23 @@ frame = 0
 
 [node name="Tree2" parent="Decorations" unique_id=1096029115 instance=ExtResource("4_6i3t0")]
 position = Vector2(165, 12)
-frame = 2
+frame = 0
 
 [node name="Tree3" parent="Decorations" unique_id=197305892 instance=ExtResource("4_6i3t0")]
 position = Vector2(282, 44)
+frame = 0
 
 [node name="Tree4" parent="Decorations" unique_id=274028127 instance=ExtResource("4_6i3t0")]
 position = Vector2(326, 113)
+frame = 0
 
 [node name="Tree5" parent="Decorations" unique_id=1603009426 instance=ExtResource("4_6i3t0")]
 position = Vector2(256, 149)
-frame = 2
+frame = 0
 
 [node name="Tree6" parent="Decorations" unique_id=792368847 instance=ExtResource("4_6i3t0")]
 position = Vector2(89, 108)
+frame = 0
 
 [node name="Tree7" parent="Decorations" unique_id=287717630 instance=ExtResource("4_6i3t0")]
 position = Vector2(61, 64)
@@ -76,11 +82,10 @@ frame = 0
 
 [node name="Tree8" parent="Decorations" unique_id=99465366 instance=ExtResource("4_6i3t0")]
 position = Vector2(18, 72)
-frame = 0
+frame = 2
 
 [node name="Tree9" parent="Decorations" unique_id=538041335 instance=ExtResource("4_6i3t0")]
 position = Vector2(253, 76)
-frame = 0
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=580175599]
 rotation = 0.7853982
