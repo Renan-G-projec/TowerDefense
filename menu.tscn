@@ -20,33 +20,35 @@ tile_map_data = PackedByteArray("AAD+/wgAAAABAAYAAAD+/wkAAAABAAYAAAD+/woAAAABAAY
 
 [node name="Tree" parent="MapBase/Decorations" index="0" unique_id=2051237497]
 position = Vector2(215, 32)
-frame = 2
 
 [node name="Tree2" parent="MapBase/Decorations" index="1" unique_id=1096029115]
 position = Vector2(146, 93)
-frame = 1
+frame = 2
 
 [node name="Tree3" parent="MapBase/Decorations" index="2" unique_id=197305892]
 position = Vector2(150, -11)
+frame = 1
 
 [node name="Tree4" parent="MapBase/Decorations" index="3" unique_id=274028127]
 position = Vector2(305, 104)
-frame = 1
 
 [node name="Tree5" parent="MapBase/Decorations" index="4" unique_id=1603009426]
 position = Vector2(270, 164)
-frame = 2
 
 [node name="Tree6" parent="MapBase/Decorations" index="5" unique_id=792368847]
 position = Vector2(329, 155)
+frame = 1
 
 [node name="Tree7" parent="MapBase/Decorations" index="6" unique_id=287717630]
 position = Vector2(64, 19)
-frame = 2
+frame = 1
 
 [node name="Tree8" parent="MapBase/Decorations" index="7" unique_id=99465366]
 position = Vector2(31, 101)
-frame = 1
+frame = 0
+
+[node name="Tree9" parent="MapBase/Decorations" index="8" unique_id=538041335]
+frame = 2
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2062676279]
 position = Vector2(160, 90)
