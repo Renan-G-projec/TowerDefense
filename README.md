@@ -11,6 +11,8 @@ It is a game about tower defense. It still very simple, with only 5 kinds of ene
 The game works in rounds. Rounds are godot resources that simply contains all the data needed to spawn enemies with the right delay. It still a poor logic (only dicionaries on a way thaat enemies can just spawn with the saem type of enemy, as dictionaries don't allow duplicated keys)
 There are 10 rounds, and at each round you receive a small amount of money. (defeating enemies also gives you money)
 
+NOTE: You start a round pressing enter!
+
 ## Towers
 There are 3 types of towers: 
 - Archer: Simply throws arrows on the enemies
